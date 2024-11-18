@@ -1,5 +1,5 @@
 import leafsBg from "../assets/leafBg.svg";
-import book from "../assets/book.svg";
+import book from "../assets/book.png";
 
 export const KlfHome = () => {
   return (
@@ -8,14 +8,14 @@ export const KlfHome = () => {
       style={{ backgroundImage: `url(${leafsBg})` }}
     >
       {/* Content */}
-      <div className="flex justify-center relative top-10">
-        <div className="flex items-center space-x-10 justify-center h-full w-[70%] font-inter ">
+      <div className="h-full flex justify-center items-center ">
+        <div className="flex space-x-10 justify-center w-[65%] font-inter ">
           {/* Left Content */}
           <div className="w-[50%]">
             <h1 className="text-3xl lg:text-4xl font-bold text-black">
               #KLF2024-Srinagar
             </h1>
-            <p className="mt-4 text-sm leading-4 text-black">
+            <p className="mt-4 text-sm leading-3 text-black">
               <strong>
                 Light - brings clarity to vision & burns ignorance
               </strong>
@@ -31,7 +31,7 @@ export const KlfHome = () => {
               They covered milestones in the fields of science, philosophy,
               arts, performing arts, literature, trade & spirituality.
             </p>
-            <p className="mt-6 text-sm leading-4 text-black">
+            <p className="mt-4 text-sm leading-3 text-black">
               <strong>Dark - is deception, ignorance & suffering</strong>
               <br />
               <br />
@@ -53,11 +53,11 @@ export const KlfHome = () => {
           </div>
 
           {/* Right Image */}
-          <div className=" w-[50%]">
+          <div className="w-[50%] flex justify-center">
             <img
               src={book}
               alt="Kashmir Literature Festival"
-              className="rounded-xl h-[85vh]"
+              className="rounded-xl h-[80vh]"
             />
           </div>
         </div>
