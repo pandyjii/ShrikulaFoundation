@@ -1,4 +1,6 @@
+import { AboutKLF } from "./AboutKLF";
 import { CountDownTimer } from "./CountDownTimer";
+import CulturalPerformances from "./CulturalPerformances";
 import { DisplayPage } from "./DisplayPage";
 import { InspiringVoices } from "./InspiringVoices";
 import { KlfHome } from "./KlfHome";
@@ -10,9 +12,11 @@ export function Hero() {
     <div>
       <DisplayPage />
       <CountDownTimer/>
-      <PartnerPage/>
-      <div className="mt-10"><KlfHome/></div>
+      <AboutKLF/>
       <div className="mt-10"><InspiringVoices/></div>
+      <div className="mt-10"><PartnerPage/></div>
+      <div className="mt-10"><CulturalPerformances/></div>
+      <div className="mt-10"><KlfHome/></div>
       <div className="mt-10"><OurVision/></div>
     </div>
   );

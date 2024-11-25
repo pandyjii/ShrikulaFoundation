@@ -1,29 +1,29 @@
-import homeImg from "../assets/homeImg.svg";
-
+import display from "../assets/display.mp4";
+import displayText from "../assets/displayText.png"
 export const DisplayPage = () => {
   return (
-    <div
-      className="h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${homeImg})` }} // Use the imported image variable
-    >
-      {/* Content */}
-      <div className="flex items-center justify-center h-full font-inter">
-        <div className="relative">
-          <p className="absolute left-[6.7rem] bottom-[2.5vh] w-[100px] text-gray-800 font-semibold font-inter">
-            First Edition
-          </p>
-        </div>
-        <div className="text-center relative top-[35vh]">
-          <p className=" text-xl font-semibold text-gray-600 font-inter">
-            7th & 8th of December 2024
-          </p>
-          <p className="mt-1 text-gray-600 text-base font-semibold font-inter">
-            at Dal Lakefront. SKICC, Srinagar. Bharat
-          </p>
-          <button className="mt-8 px-6 py-3 text-center text-white text-sm bg-[#893518] rounded-full hover:bg-white hover:text-black transition border-[1px] border-white">
-            Free Registration
-          </button>
-        </div>
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+      >
+        <source
+          src={display} // Replace with your video file path
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay Content */}
+      {/* <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-cente"></div> */}
+      <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex flex-col justify-center items-center text-white">
+        <img src={displayText} alt="" className="w-[50%]"/>
+        <p className="mt-6 text-lg md:text-xl text-center absolute bottom-4">
+          7th & 8th of December 2024 at Dal Lakefront, SKICC, Srinagar, Bharat
+        </p>
       </div>
     </div>
   );
