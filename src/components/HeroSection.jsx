@@ -2,9 +2,10 @@ import { AboutKLF } from "./AboutKLF";
 import { CountDownTimer } from "./CountDownTimer";
 import CulturalPerformances from "./CulturalPerformances";
 import { DisplayPage } from "./DisplayPage";
+import { Gallery } from "./Gallery";
 import { InspiringVoices } from "./InspiringVoices";
-import { KlfHome } from "./KlfHome";
-import { OurVision } from "./OurVision";
+import { InstagramReels } from "./InstagramReel";
+import { NewsMedia } from "./NewMedia";
 import { PartnerPage } from "./PartnerPage";
 
 export function Hero() {
@@ -14,10 +15,11 @@ export function Hero() {
       <CountDownTimer/>
       <AboutKLF/>
       <div className="mt-10"><InspiringVoices/></div>
-      <div className="mt-10"><PartnerPage/></div>
+      <div className="mt-20 mb-20"><PartnerPage/></div>
       <div className="mt-10"><CulturalPerformances/></div>
-      <div className="mt-10"><KlfHome/></div>
-      <div className="mt-10"><OurVision/></div>
+      <div className=""><Gallery/></div>
+      <div className="mt-10"><InstagramReels/></div>
+      <div className="mt-10"><NewsMedia/></div>
     </div>
   );
 }

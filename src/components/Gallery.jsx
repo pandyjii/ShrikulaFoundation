@@ -1,83 +1,81 @@
-import inspireBg from "../assets/inspiringVoiceImg/inspireBg.png";
+import React, { useState, useEffect, useRef } from "react";
+import gallerBg from "../assets/gallery/galleryBg.png";
 import inspire1 from "../assets/inspiringVoiceImg/inspire1.png";
 import inspire2 from "../assets/inspiringVoiceImg/inspire2.png";
 import inspire3 from "../assets/inspiringVoiceImg/inspire3.png";
 import inspire4 from "../assets/inspiringVoiceImg/inspire4.png";
-export const InspiringVoices = () => {
+
+export const Gallery = () => {
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollContainerRef = useRef(null);
+
+  const images = [
+    inspire1,
+    inspire2,
+    inspire3,
+    inspire4,
+    inspire1,
+    inspire2,
+    inspire3,
+    inspire4,
+  ];
+
+  // Continuous scrolling effect
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    let scrollSpeed = 1; // Speed of the scroll
+    let position = 0;
+
+    const scroll = () => {
+      if (!isPaused) {
+        position -= scrollSpeed; // Update position
+        if (Math.abs(position) >= container.scrollWidth / 2) {
+          position = 0; // Reset position for seamless loop
+        }
+        container.style.transform = `translateX(${position}px)`;
+      }
+    };
+
+    const interval = setInterval(scroll, 16); // Smooth 60 FPS animation
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [isPaused]);
+
   return (
     <div
-      className="relative bg-cover bg-center py-16 px-8"
-      style={{ backgroundImage: `url(${inspireBg})` }}
+      className="relative w-full h-[60vh] bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${gallerBg})`,
+      }}
     >
-      {/* Heading Section */}
-      <div className="w-full flex flex-col justify-center items-center">
-        <div className="bg-[#FBB59C] w-fit px-4 py-2">
-          <h2 className="text-2xl lg:text-4xl font-bold text-black">Meet Our Inspiring Voices</h2>
-        </div>
-        <p className="mt-4 text-lg text-black">
-          Celebrating the Minds Shaping Kashmiri Literature and Culture
-        </p>
-      </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-[#2E2E2E] mb-10">Gallery</h2>
 
-      {/* Auto-Scrollable Section */}
-      <div className="mt-12 overflow-hidden">
-        <div className="flex gap-6 animate-scroll">
-          {/* Speaker Card */}
-          {[
-            {
-              img: inspire1, // Remove the curly braces
-              title: "Speaker",
-              name: "Swami Rudranatha",
-              description:
-                "Invocation of Maa Sharda & planting a Kalpa Vriksha",
-            },
-            {
-              img: inspire2,
-              title: "Author",
-              name: "Arif Muhammad Khan",
-              description: "Opening Ceremony",
-            },
-            {
-              img: inspire3,
-              title: "Speaker",
-              name: "Shonaleeka Kaul",
-              description: "Bharata Before the British",
-            },
-            {
-              img: inspire4,
-              title: "Poet",
-              name: "Ravindra Pandita",
-              description: "Sharda - The Quest of Shared Heritage",
-            },
-            {
-              img: inspire1,
-              title: "Author",
-              name: "Lt Gen DP Pandita",
-              description: "Kashmir: Past, Present & Future",
-            },
-          ].map((speaker, index) => (
-            <div
-              key={index}
-              className="min-w-[250px] overflow-hidden"
-            >
-              <img
-                src={speaker.img}
-                alt={speaker.name}
-                className="w-full object-cover"
-              />
-              {/* <div className="p-4 text-center">
-                <h3 className="text-sm font-semibold text-black">
-                  {speaker.title}
-                </h3>
-                <h4 className="text-lg font-bold text-black">
-                  {speaker.name}
-                </h4>
-                <p className="mt-2 text-sm text-black">
-                  {speaker.description}
-                </p>
-              </div> */}
-            </div>
-          ))}
+        {/* Scrolling Gallery */}
+        <div
+          className="relative w-full overflow-hidden"
+          onMouseEnter={() => setIsPaused(true)} // Pause on hover
+          onMouseLeave={() => setIsPaused(false)} // Resume on leave
+        >
+          <div
+            ref={scrollContainerRef}
+            className="flex items-center gap-4"
+            style={{ display: "flex", whiteSpace: "nowrap" }}
+          >
+            {images.map((src, index) => (
+              <div
+                key={index}
+                className="w-64 h-48 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition duration-300"
+              >
+                <img
+                  src={src}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
