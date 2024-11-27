@@ -31,12 +31,12 @@ export const CountDownTimer = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white py-8 space-y-6 md:flex-row md:space-y-0 md:space-x-10">
+    <div className="flex justify-center items-center h-56 sm:h-80 bg-white py-8 px-1 md:flex-row md:space-y-0 md:space-x-8">
       {/* Left Leaf */}
       <img
         src={leftLeave}
         alt="Leaf"
-        className="w-16 h-20 md:w-24 md:h-32"
+        className="w-14 h-20 md:w-24 md:h-32"
       />
 
       {/* Countdown Boxes */}
@@ -44,7 +44,7 @@ export const CountDownTimer = () => {
         {Object.entries(timeLeft).map(([unit, value]) => (
           <div
             key={unit}
-            className="flex flex-col items-center justify-center w-16 h-20 border-2 border-[#893518] rounded-md shadow-lg md:w-20 md:h-24"
+            className="flex flex-col items-center justify-center w-14 h-24 border-2 border-[#893518] rounded-md shadow-lg md:w-24 md:h-32"
           >
             <span className="text-xl font-bold text-[#893518] md:text-3xl">{value}</span>
             <span className="text-xs text-[#893518] capitalize md:text-sm">{unit}</span>
@@ -56,7 +56,7 @@ export const CountDownTimer = () => {
       <img
         src={rightLeave}
         alt="Leaf"
-        className="w-16 h-20 md:w-24 md:h-32"
+        className="w-14 h-20 md:w-24 md:h-32"
       />
     </div>
   );

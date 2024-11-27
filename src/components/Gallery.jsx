@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import gallerBg from "../assets/gallery/galleryBg.png";
 import news1 from "../assets/newsMedia/news1.png";
 import news2 from "../assets/newsMedia/news2.png";
@@ -6,11 +6,35 @@ import news3 from "../assets/newsMedia/news3.png";
 import news4 from "../assets/newsMedia/news4.png";
 
 export const Gallery = () => {
-  const images = [news1, news2,news1,news4, news3, news4];
+  const images = [news1, news2, news1, news4, news3, news4];
+  const [isPaused, setIsPaused] = useState(false); // State to control animation
+  const scrollContainerRef = useRef(null); // Ref to access the scrolling container
+
+  // Function to handle mouse enter on images
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      // Get the current scroll position and keep it fixed
+      scrollContainer.style.animationPlayState = "paused";
+      scrollContainer.style.transform = `translateX(${scrollContainer.getBoundingClientRect().x}px)`;
+    }
+  };
+
+  // Function to handle mouse leave on images
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer) {
+      // Resume the animation
+      scrollContainer.style.animationPlayState = "running";
+      scrollContainer.style.transform = ""; // Reset transform
+    }
+  };
 
   return (
     <div
-      className="relative bg-cover bg-center h-[60vh]"
+      className="relative bg-cover bg-center h-[55vh] sm:h-[40vh] lg:h-[60vh]"
       style={{
         backgroundImage: `url(${gallerBg})`,
       }}
@@ -22,22 +46,29 @@ export const Gallery = () => {
           <h1 className="text-3xl font-bold">Gallery</h1>
           <p className="text-lg">A Glimpse Into Our World</p>
         </div>
-        
+
         {/* Scrolling Gallery */}
         <div className="overflow-hidden py-4">
           <div
-            className="flex items-center gap-4 animate-scroll"
-            style={{ width: "calc(100vw * 2)" }} // Double the width for smooth looping.
+            ref={scrollContainerRef} // Attach ref to the scrolling container
+            className={`flex items-center gap-4 ${
+              isPaused ? "" : "animate-scrollSm sm:animate-scroll2"
+            }`}
+            style={{
+              width: "calc(100vw * 2)", // Double the width for smooth looping
+            }}
           >
             {images.map((src, index) => (
               <div
                 key={index}
-                className="rounded-lg overflow-hidden grayscale hover:grayscale-0 transition duration-300"
+                className="flex-shrink-0 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition duration-300"
+                onMouseEnter={handleMouseEnter} // Pause animation on hover
+                onMouseLeave={handleMouseLeave} // Resume animation on leave
               >
                 <img
                   src={src}
                   alt={`Gallery ${index + 1}`}
-                  className="w-64 h-40 object-cover shadow-md"
+                  className="w-full h-[200px] max-w-[400px] md:max-w-[300px] sm:max-w-[200px] object-contain"
                 />
               </div>
             ))}
@@ -45,12 +76,14 @@ export const Gallery = () => {
             {images.map((src, index) => (
               <div
                 key={`clone-${index}`}
-                className="rounded-lg overflow-hidden grayscale hover:grayscale-0 transition duration-300"
+                className="flex-shrink-0 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition duration-300"
+                onMouseEnter={handleMouseEnter} // Pause animation on hover
+                onMouseLeave={handleMouseLeave} // Resume animation on leave
               >
                 <img
                   src={src}
                   alt={`Gallery Clone ${index + 1}`}
-                  className="w-64 h-40 object-cover shadow-md"
+                  className="w-full h-[200px] max-w-[400px] md:max-w-[300px] sm:max-w-[200px] object-contain"
                 />
               </div>
             ))}
