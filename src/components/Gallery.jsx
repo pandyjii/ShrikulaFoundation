@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import gallerBg from "../assets/gallery/galleryBg.png";
-import news1 from "../assets/newsMedia/news1.png";
-import news2 from "../assets/newsMedia/news2.png";
-import news3 from "../assets/newsMedia/news3.png";
-import news4 from "../assets/newsMedia/news4.png";
+import news1 from "../assets/gallery/Galleryimage1.png";
+import news2 from "../assets/gallery/gallertimage2.png";
+import news3 from "../assets/gallery/galleryimage3.png";
+import news4 from "../assets/gallery/galleryimage4.png";
 
 export const Gallery = () => {
   const images = [news1, news2, news1, news4, news3, news4];
@@ -34,7 +34,7 @@ export const Gallery = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center h-[55vh] sm:h-[40vh] lg:h-[60vh]"
+      className="relative bg-cover bg-center h-[57vh] sm:h-[42vh] lg:h-[70vh]"
       style={{
         backgroundImage: `url(${gallerBg})`,
       }}
