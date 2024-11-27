@@ -11,12 +11,22 @@ export default {
         comic: ['"Comic Sans MS"', "cursive"],
       },
       animation: {
-        scroll: "scroll 15s linear infinite", // Extended duration for smoother animation
+        scroll: "scroll 12s linear infinite",
+        scroll2: "scroll 25s linear infinite",
+        scrollSm: "scroll 8s linear infinite",
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" }, // Moves the content completely out of view
+          "100%": { transform: "translateX(-100%)" }, // Moves the content completely out of view
+        },
+        scroll2: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" }, // Moves the content completely out of view
+        },
+        scrollSm: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },

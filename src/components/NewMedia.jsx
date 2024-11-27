@@ -48,12 +48,12 @@ export const NewsMedia = () => {
           {newsItems.map((item, index) => (
             <div
               key={index}
-              className=" overflow-hidden rounded-xl transition"
+              className=" overflow-hidden rounded-2xl transition"
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48"
               />
               <div className="py-4">
                 <h3 className="text-sm font-semibold text-[#000000]">

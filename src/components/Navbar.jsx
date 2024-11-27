@@ -1,17 +1,21 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the hamburger menu
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleLogo = () =>{
+    navigate('/');
+  }
 
   return (
     <nav className="bg-black font-inter text-white px-8 py-4">
       {/* Navbar Container */}
       <div className="flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex items-center">
+        <div className="flex items-center" onClick={handleLogo}>
           <img
             src={logo} // Replace with your logo path
             alt="Logo"
@@ -91,7 +95,7 @@ const Navbar = () => {
             to="/register"
             className="border border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition"
           >
-            Register Now
+            Donate Now
           </NavLink>
         </div>
       </div>
@@ -159,7 +163,7 @@ const Navbar = () => {
             className="border border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition text-center"
             onClick={() => setIsMenuOpen(false)}
           >
-            Register Now
+            Donate Now
           </NavLink>
         </div>
       )}

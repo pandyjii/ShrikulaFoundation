@@ -22,6 +22,9 @@ const CulturalPerformances = () => {
     },
   ];
 
+  // Check if the device is small (mobile or tablet)
+  const isSmallDevice = window.innerWidth <= 1024;
+
   return (
     <div
       className="relative w-full bg-cover bg-center py-10"
@@ -31,8 +34,8 @@ const CulturalPerformances = () => {
       <div className="">
         {/* Heading */}
         <div className="text-center mb-5 mt-2">
-          <div className="w-full flex justify-center px-4 py-1 text-center">
-            <h2 className="bg-[#FBB59C] w-fit text-2xl lg:text-3xl font-bold text-black text-center">
+          <div className="w-full flex justify-center text-center">
+            <h2 className="bg-[#FBB59C] w-fit text-2xl lg:text-3xl px-4 py-3 font-bold text-black text-center">
               Cultural Performances & Exhibitions
             </h2>
           </div>
@@ -46,21 +49,22 @@ const CulturalPerformances = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="snap-center flex-shrink-0 text-center "
+              className="snap-center flex-shrink-0 text-center mx-2"
             >
-              <div className="w-64 h-96 bg-black rounded-2xl  border-[5px] border-[#DAF7FF]  overflow-hidden group relative">
+              <div className="w-64 h-96 bg-black rounded-2xl  border-[5px] border-[#DAF7FF] overflow-hidden group relative">
                 <video
                   className="w-full h-full object-cover"
                   muted
                   loop
                   preload="auto"
-                  onMouseEnter={(e) => e.target.play()}
-                  onMouseLeave={(e) => e.target.pause()}
+                  autoPlay={isSmallDevice} // Enable autoplay for small devices
+                  onMouseEnter={(e) => !isSmallDevice && e.target.play()} // Only play on hover for larger screens
+                  onMouseLeave={(e) => !isSmallDevice && e.target.pause()} // Pause on hover leave for larger screens
                 >
                   <source src={card.videoSrc} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                <div className="absolute bottom-4 left-4 text-white">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="text-sm">{card.description}</p>
                 </div>
