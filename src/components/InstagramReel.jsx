@@ -39,38 +39,36 @@ export const InstagramReels = () => {
 
     return () => {
       clearInterval(interval); // Cleanup on unmount
-      videoRefs.current.forEach((video) => video.pause()); // Pause all videos
+      videoRefs.current.forEach((video) => video?.pause()); // Pause all videos
     };
   }, [reels]);
 
   return (
-    <div className="relative w-full h-screen bg-white overflow-hidden font-inter">
+    <div className="relative w-full h-full py-10 bg-white overflow-hidden font-inter">
       {/* Heading Section */}
-      <div className="text-center pt-10">
+      <div className="text-center">
         <h2 className="text-4xl font-bold text-black">Instagram</h2>
         <p className="text-lg text-black mt-3">
-          Stay updated with our latest stories, trends, and behind-the-scenes moments
+          Stay updated with our latest stories, trends, and behind-the-scenes
+          moments
         </p>
       </div>
 
       {/* Reel Container */}
       <div
         ref={reelContainerRef}
-        className="flex overflow-x-scroll no-scrollbar w-full h-full snap-x snap-mandatory justify-center items-center"
+        className="flex overflow-x-scroll no-scrollbar w-full mt-10 snap-x snap-mandatory justify-center items-center"
+        style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {reels.map((reel, index) => (
-          <div
-            key={index}
-            className="snap-center w-[300px] flex-shrink-0 mx-2" // Ensure fixed width for uniform reels and reduced gaps
-          >
-            <div className="relative bg-white rounded-2xl shadow-md h-full">
-              {/* Added 'rounded-2xl' to the video */}
+          <div key={index} className="snap-center w-[300px]">
+            <div className="w-64 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 src={reel}
                 loop
                 muted
-                className="w-full h-full object-cover rounded-2xl" // Apply rounding to the video
+                className=""
               />
             </div>
           </div>

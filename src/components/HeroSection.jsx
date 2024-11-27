@@ -15,9 +15,9 @@ export function Hero() {
       <CountDownTimer/>
       <AboutKLF/>
       <div className="mt-10"><InspiringVoices/></div>
-      <div className="mt-20 mb-20"><PartnerPage/></div>
-      <div className="mt-10"><CulturalPerformances/></div>
-      <div className=""><Gallery/></div>
+      <div className="mt-10"><PartnerPage/></div>
+      <div className="sm:mt-10"><CulturalPerformances/></div>
+      <div className="mt-10"><Gallery/></div>
       <div className="mt-10"><InstagramReels/></div>
       <div className="mt-10"><NewsMedia/></div>
     </div>

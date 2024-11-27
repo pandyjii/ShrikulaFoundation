@@ -1,30 +1,29 @@
 import React from "react";
-import instagram1 from "../assets/instagram.svg";
-import vector from "../assets/Vector.svg";
-import vector1 from "../assets/Vector2.svg";
-import vector2 from "../assets/vector3.svg";
+import instagram from "../assets/footer/Instagram.png";
+import facebook from "../assets/footer/Facebook.png";
+import twitter from "../assets/footer/twitter.png";
+import linkedln from "../assets/footer/LinkedIn.png";
+import footerBg from "../assets/footer/footerBg.png";
 
 export function Footer() {
   return (
-    <div className="bg-black text-white flex justify-around py-10">
+    <div
+      className="w-full flex flex-col md:flex-row justify-center py-10 gap-10 md:pl-10"
+      style={{
+        backgroundImage: `url(${footerBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Address Section */}
-      <div className="flex flex-col gap-4">
-        <p className="text-2xl font-bold">Address</p>
-        <p className="w-[20vw]">
+      <div className="flex flex-col items-start justify-center gap-4 md:w-1/3 px-4 text-black font-inter">
+        <p className="text-xl font-semibold">Address</p>
+        <p className="text-sm md:text-base">
           At Dal Lakefront, SKICC, Srinagar, Bharat, 24800
         </p>
         {/* Embedded Google Map */}
         <div
-          className="map-container"
-          style={{
-            width: "100%", // Adjust to fit the parent container
-            maxWidth: "400px",
-            height: "250px",
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            overflow: "hidden",
-            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-          }}
+          className="map-container w-full max-w-[400px] h-[250px] border border-gray-300 rounded-lg shadow-md overflow-hidden text-black font-inter"
         >
           <iframe
             width="100%"
@@ -36,55 +35,54 @@ export function Footer() {
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyACxc35CQpI0mZsknOyBKC3UbvJP24iD98&q=Dal+Lakefront,+SKICC,+Srinagar,+Bharat,+24800"
           ></iframe>
         </div>
-
       </div>
 
       {/* Company and Resources Section */}
-      <div className="flex-col">
-        <div className="w-[25vw] flex justify-around py-3">
+      <div className="flex flex-col items-start gap-6 md:w-1/3 px-4 text-black font-inter">
+        <div className="flex flex-wrap justify-between w-full gap-6">
           {/* Company Links */}
           <div className="flex flex-col gap-4">
-            <p className="text-2xl font-bold">Company</p>
-            <p>Home</p>
-            <p>About Me</p>
-            <p>Services</p>
+            <p className="text-xl font-semibold">Company</p>
+            <p className="text-sm md:text-base">Home</p>
+            <p className="text-sm md:text-base">About Me</p>
+            <p className="text-sm md:text-base">Services</p>
           </div>
 
           {/* Resources Links */}
           <div className="flex flex-col gap-4">
-            <p className="text-2xl font-bold">Resources</p>
-            <p>Blog</p>
-            <p>Events</p>
-            <p>Books</p>
+            <p className="text-xl font-semibold">Resources</p>
+            <p className="text-sm md:text-base">Blog</p>
+            <p className="text-sm md:text-base">Events</p>
+            <p className="text-sm md:text-base">Books</p>
           </div>
         </div>
 
         {/* Social Media Icons */}
-        <div className="w-[23vw] flex items-center justify-around py-14 px-4">
-          <img src={instagram1} alt="Instagram" className="h-8 w-8" />
-          <img src={vector} alt="Social Icon 1" className="h-8 w-8" />
-          <img src={vector1} alt="Social Icon 2" className="h-8 w-8" />
-          <img src={vector2} alt="Social Icon 3" className="h-8 w-8" />
+        <div className="flex items-center w-full gap-7 py-4">
+          <img src={linkedln} alt="Instagram" className="h-8 w-8" />
+          <img src={twitter} alt="Social Icon 1" className="h-8 w-8" />
+          <img src={facebook} alt="Social Icon 2" className="h-8 w-8" />
+          <img src={instagram} alt="Social Icon 3" className="h-8 w-8" />
         </div>
       </div>
 
       {/* Contact and Subscription Section */}
-      <div className="flex flex-col gap-6">
-        <p className="text-2xl font-bold">Contact</p>
-        <p>Greyson Lane 6212-648 Palarni</p>
-        <p>(610) 945-7986</p>
-        <p>hello@thedancecorps.co</p>
+      <div className="flex flex-col items-start gap-6 md:w-1/3 px-4 text-black font-inter">
+        <p className="text-xl font-semibold">Contact</p>
+        <p className="text-sm md:text-base">Greyson Lane 6212-648 Palarni</p>
+        <p className="text-sm md:text-base">(610) 945-7986</p>
+        <p className="text-sm md:text-base">hello@thedancecorps.co</p>
 
         {/* Subscription Form */}
-        <div className="flex flex-col gap-4 py-7">
-          <p className="text-xl">Subscribe for More News</p>
-          <div className="flex justify-center items-center py-1 rounded-2xl bg-white px-1">
+        <div className="flex flex-col gap-4 text-black font-inter">
+          <p className="text-lg md:text-xl">Subscribe for More News</p>
+          <div className="flex items-center rounded-lg bg-white p-1 shadow-lg">
             <input
               type="text"
               placeholder="Email Address"
-              className="pl-3 border-none w-[60%] text-black"
+              className="md:w-10 lg:w-full flex-1 px-3 py-2 text-black text-sm md:text-base focus:outline-none"
             />
-            <button className="bg-[#F69675] w-[40%] text-center pl-3 py-1 rounded-2xl text-sm">
+            <button className="bg-[#F69675] px-4 py-2 rounded-lg text-sm md:text-base text-white">
               Subscribe
             </button>
           </div>

@@ -76,10 +76,10 @@ export const InspiringVoices = () => {
 
       {/* Heading Section */}
       <div className="w-full flex flex-col justify-center items-center mb-10">
-        <div className="bg-[#FBB59C] w-fit px-4 py-2">
+        <div className="bg-[#FBB59C] w-fit px-4 py-2 text-center">
           <h2 className="text-2xl lg:text-4xl font-bold text-black">Meet Our Inspiring Voices</h2>
         </div>
-        <p className="mt-4 text-lg text-black">
+        <p className="mt-4 text-lg text-black text-center">
           Celebrating the Minds Shaping Kashmiri Literature and Culture
         </p>
       </div>

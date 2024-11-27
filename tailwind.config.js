@@ -16,7 +16,7 @@ export default {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" }, // Moves the content completely out of view
+          "100%": { transform: "translateX(-50%)" }, // Moves the content completely out of view
         },
       },
     },
