@@ -60,7 +60,7 @@ export const InstagramReels = () => {
   }, [reels, isSmallScreen]);
 
   return (
-    <div className="relative w-full h-[80vh] py-10 bg-white overflow-hidden font-inter">
+    <div className="relative w-full h-[80vh] sm:h-[60vh] lg:h-[80vh] py-10 bg-white overflow-hidden font-inter">
       {/* Heading Section */}
       <div className="text-center">
         <h2 className="text-4xl font-bold text-black">Instagram</h2>

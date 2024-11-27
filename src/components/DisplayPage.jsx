@@ -3,7 +3,7 @@ import displayText from "../assets/displayText.png";
 
 export const DisplayPage = () => {
   return (
-    <div className="relative w-full h-[60vh] md:h-screen overflow-hidden">
+    <div className="relative w-full h-[60vh] md:h-[65vh] lg:h-[90vh] overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"

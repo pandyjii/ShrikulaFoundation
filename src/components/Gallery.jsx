@@ -34,7 +34,7 @@ export const Gallery = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center h-[60vh]"
+      className="relative bg-cover bg-center h-[55vh] sm:h-[40vh] lg:h-[60vh]"
       style={{
         backgroundImage: `url(${gallerBg})`,
       }}
