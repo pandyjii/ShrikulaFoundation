@@ -1,5 +1,5 @@
 import React from "react";
-import newsBg from "../assets/gallery/galleryBg.png";
+import newsBg from "../assets/newsMedia/mediaBg.png";
 import news1 from "../assets/newsMedia/news1.png";
 import news2 from "../assets/newsMedia/news2.png";
 import news3 from "../assets/newsMedia/news3.png";

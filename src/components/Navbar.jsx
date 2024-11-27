@@ -37,8 +37,8 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
           >
             Home
@@ -47,8 +47,8 @@ const Navbar = () => {
             to="/klf2024"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
           >
             KLF 2024
@@ -57,8 +57,8 @@ const Navbar = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
           >
             About Us
@@ -67,8 +67,8 @@ const Navbar = () => {
             to="/contact"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
           >
             Contact Us
@@ -77,8 +77,8 @@ const Navbar = () => {
             to="/gallery"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
           >
             Gallery
@@ -103,8 +103,8 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
             onClick={() => setIsMenuOpen(false)}
           >
@@ -114,8 +114,8 @@ const Navbar = () => {
             to="/klf2024"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
             onClick={() => setIsMenuOpen(false)}
           >
@@ -125,8 +125,8 @@ const Navbar = () => {
             to="/about"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
             onClick={() => setIsMenuOpen(false)}
           >
@@ -136,8 +136,8 @@ const Navbar = () => {
             to="/contact"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
             onClick={() => setIsMenuOpen(false)}
           >
@@ -147,8 +147,8 @@ const Navbar = () => {
             to="/gallery"
             className={({ isActive }) =>
               isActive
-                ? "text-orange-500 border-b-2 border-orange-500"
-                : "hover:text-orange-500"
+                ? " border-b-2 border-white"
+                : "hover:"
             }
             onClick={() => setIsMenuOpen(false)}
           >
