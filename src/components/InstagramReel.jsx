@@ -62,13 +62,13 @@ export const InstagramReels = () => {
       >
         {reels.map((reel, index) => (
           <div key={index} className="snap-center w-[300px]">
-            <div className="w-64 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative">
+            <div className="w-72 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative">
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 src={reel}
                 loop
                 muted
-                className=""
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
