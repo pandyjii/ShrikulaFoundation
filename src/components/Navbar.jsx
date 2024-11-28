@@ -78,10 +78,10 @@ const Navbar = () => {
             Contact Us
           </NavLink>
           <NavLink
-            to="/gallery"
+            to=""
             className={({ isActive }) =>
               isActive
-                ? " border-b-2 border-white"
+                ? " border-b-0 border-white"
                 : "hover:"
             }
           >
@@ -148,10 +148,10 @@ const Navbar = () => {
             Contact Us
           </NavLink>
           <NavLink
-            to="/gallery"
+            to="/"
             className={({ isActive }) =>
               isActive
-                ? " border-b-2 border-white"
+                ? " border-b-0 border-white"
                 : "hover:"
             }
             onClick={() => setIsMenuOpen(false)}

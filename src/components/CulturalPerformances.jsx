@@ -1,6 +1,8 @@
 import performanceBg from "../assets/performanceImg/performanceBg.png";
 import video1 from "../assets/instagram/AwaraHoon.mp4";
 import video2 from "../assets/instagram/Video.mov";
+import video3 from "../assets/instagram/reels3.mp4";
+
 
 const CulturalPerformances = () => {
   // Array of card data
@@ -16,7 +18,7 @@ const CulturalPerformances = () => {
       description: "Contemporary Kashmiri Artist",
     },
     {
-      videoSrc: video1,
+      videoSrc: video3,
       title: "Kashmir Band",
       description: "Soulful Cultural Band",
     },
@@ -45,7 +47,7 @@ const CulturalPerformances = () => {
         </div>
 
         {/* Content Cards */}
-        <div className="flex flex-wrap w-full justify-center text-center">
+        <div className="flex flex-col sm:flex-row w-full justify-center items-center text-center">
           {cards.map((card, index) => (
             <div
               key={index}

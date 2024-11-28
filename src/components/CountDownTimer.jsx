@@ -44,7 +44,7 @@ export const CountDownTimer = () => {
         {Object.entries(timeLeft).map(([unit, value]) => (
           <div
             key={unit}
-            className="flex flex-col items-center justify-center w-14 h-24 border-2 border-[#893518] rounded-md shadow-lg md:w-24 md:h-32"
+            className="flex flex-col items-center justify-center w-14 h-20 border-2 border-[#893518] rounded-md shadow-lg md:w-24 md:h-32"
           >
             <span className="text-xl font-bold text-[#893518] md:text-3xl">{value}</span>
             <span className="text-xs text-[#893518] capitalize md:text-sm">{unit}</span>
