@@ -4,11 +4,11 @@ import facebook from "../assets/footer/Facebook.png";
 import twitter from "../assets/footer/twitter.png";
 import linkedln from "../assets/footer/LinkedIn.png";
 import footerBg from "../assets/footer/footerBg.png";
-
+import denion from "../assets/footer/denion.png";
 export function Footer() {
   return (
     <div
-      className="w-full flex flex-col md:flex-row justify-center py-10 gap-10 md:pl-10"
+      className="w-full flex flex-col md:flex-row justify-center py-14 sm:py-10 gap-10 md:pl-10 relative"
       style={{
         backgroundImage: `url(${footerBg})`,
         backgroundSize: "cover",
@@ -87,6 +87,9 @@ export function Footer() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="flex absolute bottom-2 left-12 sm:left-[45vw] sm:bottom-4 items-center font-inter gap-1">
+        <p>© 2024 KLF | Powered by <span className="bg-black py-2 px-3 ml-1 text-sm font-bold text-white">Denion</span></p>
       </div>
     </div>
   );
