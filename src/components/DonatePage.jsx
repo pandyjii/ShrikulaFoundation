@@ -54,7 +54,7 @@ export function ShrikulaDonation() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="bg-white rounded-lg shadow-md p-6 w-96 text-center">
+      <div className="bg-white rounded-lg p-6 w-96 text-center">
         {/* Logo */}
         <div className="w-12 h-12 bg-blue-500 text-white rounded-full mx-auto flex items-center justify-center mb-4">
           <span className="text-2xl font-bold">S</span>

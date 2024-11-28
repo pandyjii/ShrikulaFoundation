@@ -1,66 +1,42 @@
 import React, { useRef, useEffect, useState } from "react";
-import video1 from "../assets/instagram/AwaraHoon.mp4";
-import video2 from "../assets/instagram/Video.mov";
+import image1 from "../assets/instagram/post1.png";
+import image2 from "../assets/instagram/post2.png";
+import image3 from "../assets/instagram/post3.png";
+import image4 from "../assets/instagram/post4.png";
 
 export const InstagramReels = () => {
   const reelContainerRef = useRef(null);
-  const videoRefs = useRef([]);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Array of videos
-  const reels = [video1, video2, video1];
+  // Array of images
+  const images = [image1, image2, image3, image4];
 
   useEffect(() => {
-    // Detect screen size
-    const checkScreenSize = () => {
-      setIsSmallScreen(window.innerWidth < 768); // Small screen for widths < 768px
-    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 } // Trigger when 20% of the component is visible
+    );
 
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
+    if (reelContainerRef.current) {
+      observer.observe(reelContainerRef.current);
+    }
 
     return () => {
-      window.removeEventListener("resize", checkScreenSize);
+      if (reelContainerRef.current) {
+        observer.unobserve(reelContainerRef.current);
+      }
     };
   }, []);
 
-  useEffect(() => {
-    if (!isSmallScreen) return; // Only apply auto-scroll for small screens
-
-    const container = reelContainerRef.current;
-    let index = 0;
-
-    const playReels = () => {
-      if (container) {
-        container.scrollTo({
-          left: index * container.offsetWidth,
-          behavior: "smooth",
-        });
-
-        // Play the current video and pause others
-        videoRefs.current.forEach((video, videoIndex) => {
-          if (videoIndex === index) {
-            video.play();
-          } else {
-            video.pause();
-          }
-        });
-
-        // Increment or reset index
-        index = (index + 1) % reels.length;
-      }
-    };
-
-    const interval = setInterval(playReels, 5000); // Change reel every 5 seconds
-
-    return () => {
-      clearInterval(interval);
-      videoRefs.current.forEach((video) => video?.pause());
-    };
-  }, [reels, isSmallScreen]);
-
   return (
-    <div className="relative w-full h-[80vh] sm:h-[60vh] lg:h-[80vh] py-10 bg-white overflow-hidden font-inter">
+    <div
+      ref={reelContainerRef}
+      className="relative w-full h-auto py-10 bg-white overflow-hidden font-inter"
+    >
       {/* Heading Section */}
       <div className="text-center">
         <h2 className="text-4xl font-bold text-black">Instagram</h2>
@@ -69,37 +45,22 @@ export const InstagramReels = () => {
         </p>
       </div>
 
-      {/* Reel Container */}
+      {/* Image Reel Section */}
       <div
-        ref={reelContainerRef}
-        className={`flex justify-center w-full mt-10 ${
-          isSmallScreen ? "overflow-hidden" : "overflow-x-auto no-scrollbar"
-        } snap-x snap-mandatory`}
-        style={{
-          scrollSnapType: isSmallScreen ? "x mandatory" : "none",
-        }}
+        className={`flex flex-col sm:flex-row items-center gap-6 mt-10 justify-center px-4 ${
+          isVisible ? "animate-fadeIn" : "opacity-0"
+        }`}
       >
-        {reels.map((reel, index) => (
+        {images.map((image, index) => (
           <div
             key={index}
-            className={`${
-              isSmallScreen
-                ? "snap-center flex-shrink-0 w-full flex justify-center"
-                : "flex-shrink-0 w-[300px] mx-2 text-center"
-            }`}
+            className="w-64 h-96 rounded-2xl border-y-[5px] border-[#DAF7FF] overflow-hidden relative"
           >
-            <div className="w-72 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative">
-              <video
-                ref={(el) => (videoRefs.current[index] = el)}
-                src={reel}
-                loop
-                muted
-                className="w-full h-full object-cover"
-                // Play on hover for large screens
-                onMouseEnter={() => !isSmallScreen && videoRefs.current[index]?.play()}
-                onMouseLeave={() => !isSmallScreen && videoRefs.current[index]?.pause()}
-              />
-            </div>
+            <img
+              src={image}
+              alt={`Instagram Reel ${index + 1}`}
+              className="w-full h-full object-cover rounded-2xl"
+            />
           </div>
         ))}
       </div>

@@ -14,6 +14,7 @@ export default {
         scroll: "scroll 12s linear infinite",
         scroll2: "scroll 25s linear infinite",
         scrollSm: "scroll 8s linear infinite",
+        fadeIn: "fadeIn 3s ease-out",
       },
       keyframes: {
         scroll: {
@@ -27,6 +28,10 @@ export default {
         scrollSm: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        fadeIn: {
+          "0%": { opacity: 1, transform: "translateY(50px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
         },
       },
     },

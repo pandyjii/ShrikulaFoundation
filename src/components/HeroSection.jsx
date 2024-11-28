@@ -6,10 +6,17 @@ import { Gallery } from "./Gallery";
 import { InspiringVoices } from "./InspiringVoices";
 import { InstagramReels } from "./InstagramReel";
 import { NewsMedia } from "./NewMedia";
-import { PartnerPage } from "./PartnerPage";
+import { FestivalPartners } from "./PartnerPage";
 import leafsBg from "../assets/klfBg.png";
+import { useEffect } from "react";
 
 export function Hero() {
+
+  useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative">
       {/* Fixed Background */}
@@ -31,10 +38,10 @@ export function Hero() {
         <div className="">
           <InspiringVoices />
         </div>
-        <div className="mt-10">
-          <PartnerPage />
+        <div className="">
+          <FestivalPartners />
         </div>
-        <div className="sm:mt-10">
+        <div className="">
           <CulturalPerformances />
         </div>
         <div className="">
