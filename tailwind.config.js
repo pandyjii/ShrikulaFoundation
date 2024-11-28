@@ -11,23 +11,28 @@ export default {
         comic: ['"Comic Sans MS"', "cursive"],
       },
       animation: {
-        scroll: "scroll 12s linear infinite",
+        scroll: "scroll 22s linear infinite",
         scroll2: "scroll 25s linear infinite",
         scrollSm: "scroll 8s linear infinite",
+        scrollSmInspire: "scroll 8s linear infinite",
         fadeIn: "fadeIn 3s ease-out",
       },
       keyframes: {
         scroll: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" }, // Moves the content completely out of view
+          "0%": { transform: "translateX(20%)" },
+          "100%": { transform: "translateX(-200%)" },
         },
         scroll2: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" }, // Moves the content completely out of view
+          "100%": { transform: "translateX(-100%)" }, 
         },
         scrollSm: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        scrollSmInspire: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-400%)" },
         },
         fadeIn: {
           "0%": { opacity: 1, transform: "translateY(50px)" },

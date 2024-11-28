@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import inspireBg from "../assets/inspiringVoiceImg/inspirationBg.png";
 import ajay from "../assets/inspiringVoiceImg/ajayRaina.png";
 import ami from "../assets/inspiringVoiceImg/amiGanatra.png";
@@ -27,6 +27,12 @@ export const InspiringVoices = () => {
       image: pandey,
     },
     {
+      name: "Yana Mir",
+      role: "Kashmir First Female Blogger",
+      topic: "",
+      image: yana,
+    },
+    {
       name: "Amb. Kanwal Sibal",
       role: "Former Foreign Secretary of India & Chancellor, JNU",
       topic: "Indian Diplomacy in Changing Times",
@@ -39,21 +45,27 @@ export const InspiringVoices = () => {
       image: ashok,
     },
     {
+      name: "Raja Muneeb",
+      role: "Journalist",
+      topic: "Columnist & Geo-political observer",
+      image: raja,
+    },
+    {
+      name: "Namrata Wakhloo",
+      role: "Author",
+      topic: "Chronicler & Photographer",
+      image: namrata,
+    },
+    {
       name: "S. Y. Quraishi",
       role: "Former Chief Election Commissioner of India",
       topic: "Democracy and Electoral Reforms",
       image: quraisi,
     },
     {
-      name: "Prof. Nilofer Khan",
-      role: "Vice-Chancellor, Kashmir University",
-      topic: "Higher Education in Conflict Zones",
-      image: ami,
-    },
-    {
-      name: "Dr. S. K. Manjul",
-      role: "Addl DG, Archaeological Survey of India",
-      topic: "Preserving India's Heritage",
+      name: "Javed Beigh",
+      role: "Social Activist",
+      topic: "Representing J&K at UN",
       image: javed,
     },
     {
@@ -93,6 +105,7 @@ export const InspiringVoices = () => {
       image: anuj,
     },
   ];
+  const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
 
   return (
     <div
@@ -113,11 +126,13 @@ export const InspiringVoices = () => {
 
       {/* Scrolling Container */}
       <div className="overflow-hidden">
-        <div className="flex animate-scrollSm sm:animate-scroll whitespace-nowrap">
+        <div className="flex space-x-4 animate-scrollSmInspire sm:animate-scroll">
           {[...speakers, ...speakers].map((speaker, index) => (
             <div
               key={index}
-              className="min-w-[150px] md:min-w-[200px] lg:min-w-[250px] mx-4 overflow-hidden"
+              className="min-w-[150px] md:min-w-[200px] lg:min-w-[250px] relative group"
+              onMouseEnter={() => setHoveredSpeaker(index)}
+              onMouseLeave={() => setHoveredSpeaker(null)}
             >
               <img
                 src={speaker.image}
@@ -128,11 +143,16 @@ export const InspiringVoices = () => {
                 <h3 className="text-sm font-semibold text-black">
                   {speaker.role}
                 </h3>
-                <h4 className="text-lg font-bold text-black">
-                  {speaker.name}
-                </h4>
-                <p className="mt-2 text-sm text-black">{speaker.topic}</p>
+                <h4 className="text-base font-bold text-black">{speaker.name}</h4>
               </div>
+              {/* Popup for Speaker Details */}
+              {hoveredSpeaker === index && (
+                <div className="absolute top-0 left-0 bg-white/90 p-4 w-full h-full flex flex-col justify-center items-center rounded-lg shadow-lg z-10">
+                  <h3 className="text-lg font-bold text-black">{speaker.name}</h3>
+                  <p className="text-sm text-black mt-2">{speaker.role}</p>
+                  <p className="text-sm text-black mt-2 italic">{speaker.topic}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
