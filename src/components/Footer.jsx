@@ -4,11 +4,10 @@ import facebook from "../assets/footer/Facebook.png";
 import twitter from "../assets/footer/twitter.png";
 import linkedln from "../assets/footer/LinkedIn.png";
 import footerBg from "../assets/footer/footerBg.png";
-
 export function Footer() {
   return (
     <div
-      className="w-full flex flex-col md:flex-row justify-center py-10 gap-10 md:pl-10"
+      className="w-full flex flex-col md:flex-row justify-center py-14 sm:py-10 gap-10 md:pl-10"
       style={{
         backgroundImage: `url(${footerBg})`,
         backgroundSize: "cover",

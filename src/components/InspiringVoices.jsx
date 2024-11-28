@@ -130,7 +130,7 @@ export const InspiringVoices = () => {
           {[...speakers, ...speakers].map((speaker, index) => (
             <div
               key={index}
-              className="min-w-[150px] md:min-w-[200px] lg:min-w-[250px] relative group"
+              className="min-w-[250px] relative group"
               onMouseEnter={() => setHoveredSpeaker(index)}
               onMouseLeave={() => setHoveredSpeaker(null)}
             >

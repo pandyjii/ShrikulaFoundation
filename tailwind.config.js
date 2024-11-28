@@ -12,8 +12,8 @@ export default {
       },
       animation: {
         scroll: "scroll 22s linear infinite",
-        scroll2: "scroll 25s linear infinite",
-        scrollSm: "scroll 8s linear infinite",
+        scroll2: "scroll 30s linear infinite",
+        scrollSm: "scroll 20s linear infinite",
         scrollSmInspire: "scroll 8s linear infinite",
         fadeIn: "fadeIn 3s ease-out",
       },

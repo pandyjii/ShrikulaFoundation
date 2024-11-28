@@ -8,19 +8,19 @@ const CulturalPerformances = () => {
   // Array of card data
   const cards = [
     {
+      videoSrc: video2,
+      title: "Aishwarya Attri",
+      description: "Bharatanatyam dancer",
+    },
+    {
       videoSrc: video1,
       title: "Abha Hanjura",
       description: "Famous Kashmiri Singer",
     },
     {
-      videoSrc: video2,
-      title: "Rohan Koul",
-      description: "Contemporary Kashmiri Artist",
-    },
-    {
       videoSrc: video3,
-      title: "Kashmir Band",
-      description: "Soulful Cultural Band",
+      title: "Nandana Moulick",
+      description: "Bharatanatyam dancer",
     },
   ];
 

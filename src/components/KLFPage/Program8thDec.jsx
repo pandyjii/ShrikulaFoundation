@@ -1,8 +1,8 @@
 import calenderBg from "../../assets/klfCalender/calenderBg.png";
 import leafs from "../../assets/klfCalender/claenderLeafs.png";
-import image2 from "../../assets/klfCalender/image2.png";
-import image3 from "../../assets/klfCalender/image3.png";
-import image1 from "../../assets/klfCalender/image31.png";
+import image2 from "../../assets/klfCalender/engaging.png";
+import image1 from "../../assets/klfCalender/dialouges.png";
+import image3 from "../../assets/klfCalender/music.png";
 
 export const Program8thDec = () => {
   // Array of content items
@@ -10,17 +10,17 @@ export const Program8thDec = () => {
     {
       id: 1,
       image: image1,
-      title: "Book Launch & Discussions",
+      title: "Enriching dialogues",
     },
     {
       id: 2,
       image: image2,
-      title: "Exploring Mysticism",
+      title: "Engaging interactions",
     },
     {
       id: 3,
       image: image3,
-      title: "Combat Performances",
+      title: "Music Gala Performances",
     },
   ];
 
