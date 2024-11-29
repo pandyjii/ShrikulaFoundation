@@ -16,6 +16,7 @@ export default {
         scrollSm: "scroll 20s linear infinite",
         scrollSmInspire: "scroll 8s linear infinite",
         fadeIn: "fadeIn 3s ease-out",
+        marquee: 'marquee 10s linear infinite',
       },
       keyframes: {
         scroll: {
@@ -38,6 +39,20 @@ export default {
           "0%": { opacity: 1, transform: "translateY(50px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+
+     transform: {
+        "rotate-y-180": "rotateY(180deg)",
+      },
+      perspective: {
+        DEFAULT: "1000px",
+      },
+      backfaceVisibility: {
+        hidden: "hidden",
       },
     },
   },

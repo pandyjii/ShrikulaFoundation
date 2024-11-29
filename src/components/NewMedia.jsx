@@ -85,7 +85,7 @@ export const NewsMedia = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-48"
+                className="w-full h-56 sm:h-48"
               />
               <div className="py-4">
                 <h3 className="text-sm font-semibold text-[#000000]">

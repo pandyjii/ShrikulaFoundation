@@ -24,10 +24,12 @@ export const DisplayPage = () => {
           className="w-[90%] h-[30%] md:w-[50%] max-w-[500px]"
         />
 
-        {/* Bottom Text */}
-        <p className="mt-6 text-sm md:text-lg lg:text-xl text-center px-4 absolute bottom-6 md:bottom-10 text-white">
-          7th & 8th of December 2024 at Dal Lakefront, SKICC, Srinagar, Bharat
-        </p>
+        {/* Marquee Bottom Text */}
+        <div className="absolute bottom-6 w-[50vw] overflow-hidden">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-base text-center px-4 text-black font-inter font-semibold">
+            7th & 8th of December 2024 at Dal Lakefront, SKICC, Srinagar, Bharat
+          </div>
+        </div>
       </div>
     </div>
   );

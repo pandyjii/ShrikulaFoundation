@@ -4,7 +4,7 @@ import rightLeave from '../assets/rightLeaves.png';
 
 export const CountDownTimer = () => {
   const calculateTimeLeft = () => {
-    const eventDate = new Date("2024-12-07T00:00:00"); // Target date
+    const eventDate = new Date("2024-12-07T10:00:00"); // Target date
     const currentTime = new Date();
     const difference = eventDate - currentTime;
 

@@ -1,31 +1,27 @@
 import performanceBg from "../assets/performanceImg/performanceBg.png";
-import video1 from "../assets/instagram/AwaraHoon.mp4";
-import video2 from "../assets/instagram/Video.mov";
-import video3 from "../assets/instagram/reels3.mp4";
-
+import image1 from "../assets/performanceImg/Aiswarya.png";
+import image2 from "../assets/performanceImg/Aaha.png";
+import image3 from "../assets/performanceImg/nandana.png";
 
 const CulturalPerformances = () => {
   // Array of card data
   const cards = [
     {
-      videoSrc: video2,
+      imageSrc: image1,
       title: "Aishwarya Attri",
       description: "Bharatanatyam dancer",
     },
     {
-      videoSrc: video1,
+      imageSrc: image2,
       title: "Abha Hanjura",
       description: "Famous Kashmiri Singer",
     },
     {
-      videoSrc: video3,
+      imageSrc: image3,
       title: "Nandana Moulick",
       description: "Bharatanatyam dancer",
     },
   ];
-
-  // Check if the device is small (mobile or tablet)
-  const isSmallDevice = window.innerWidth <= 1024;
 
   return (
     <div
@@ -41,7 +37,7 @@ const CulturalPerformances = () => {
               Cultural Performances & Exhibitions
             </h2>
           </div>
-          <p className="mt-4 text-lg md:text-lg text-center font-semibold text-gray-700">
+          <p className="mt-4 text-lg md:text-lg text-center font-semibold text-black">
             Experience the Heart of Culture
           </p>
         </div>
@@ -53,19 +49,12 @@ const CulturalPerformances = () => {
               key={index}
               className="snap-center flex-shrink-0 text-center mx-2"
             >
-              <div className="w-64 h-96 bg-black rounded-2xl  border-[5px] border-[#DAF7FF] overflow-hidden group relative">
-                <video
+              <div className="w-64 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative">
+                <img
                   className="w-full h-full object-cover"
-                  muted
-                  loop
-                  preload="auto"
-                  autoPlay={isSmallDevice} // Enable autoplay for small devices
-                  onMouseEnter={(e) => !isSmallDevice && e.target.play()} // Only play on hover for larger screens
-                  onMouseLeave={(e) => !isSmallDevice && e.target.pause()} // Pause on hover leave for larger screens
-                >
-                  <source src={card.videoSrc} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                  src={card.imageSrc}
+                  alt={card.title}
+                />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="text-sm">{card.description}</p>
