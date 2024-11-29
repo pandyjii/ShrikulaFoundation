@@ -113,7 +113,7 @@ export function ShrikulaDonation() {
 
         <button
           onClick={handleDonation}
-          className="w-full bg-blue-500 text-white font-medium rounded-md py-2 mt-4 hover:bg-blue-600 transition"
+          className="w-full bg-[#BA451C] text-white font-medium rounded-md py-2 mt-4"
         >
           Pay ₹{amount || 0}
         </button>

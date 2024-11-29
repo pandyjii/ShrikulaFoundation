@@ -7,12 +7,12 @@ export const AboutKLF = () => {
   }
   return (
     <div className=" bg-black bg-opacity-50">
-      <div className="px-8 py-12 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div className="px-8 py-14 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center  gap-10">
         {/* Text Section */}
-        <div className="md:w-1/2 text-center md:text-left space-y-2">
+        <div className="md:w-[80%] text-center md:text-left space-y-2">
           <h2 className="text-2xl font-bold text-white">About</h2>
           <h3 className="text-3xl font-bold text-white">KLF 2024</h3>
-          <div className="space-y-6">
+          <div className="space-y-6 sm:text-lg">
           <p className="text-white">
             The first edition of the Kashmir Literature Festival to be held on
             7th & 8th of December, 2024 wishes an atmosphere to allow
@@ -37,13 +37,7 @@ export const AboutKLF = () => {
           </div>
         </div>
         {/* Image Section */}
-        <div className="hidden md:w-1/2 mt-8 md:mt-0 sm:flex justify-center">
-          <img
-            src={book}
-            alt="KLF 2024"
-            className="rounded-lg shadow-md"
-          />
-        </div>
+        
       </div>
       </div>
   );

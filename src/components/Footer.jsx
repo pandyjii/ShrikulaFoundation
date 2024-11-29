@@ -39,15 +39,14 @@ export function Footer() {
         <div className="flex flex-wrap justify-between w-full gap-6">
           {/* Company Links */}
           <div className="flex flex-col gap-4">
-            <p className="text-xl font-semibold">Company</p>
+            <p className="text-xl font-semibold">COMPANY</p>
             <p className="text-sm md:text-base">Home</p>
-            <p className="text-sm md:text-base">About Me</p>
-            <p className="text-sm md:text-base">Services</p>
+            <p className="text-sm md:text-base">Srikula</p>
           </div>
 
           {/* Resources Links */}
           <div className="flex flex-col gap-4">
-            <p className="text-xl font-semibold">Resources</p>
+            <p className="text-xl font-semibold">RESOURCES</p>
             <p className="text-sm md:text-base">Blog</p>
             <p className="text-sm md:text-base">Events</p>
             <p className="text-sm md:text-base">Books</p>
@@ -75,10 +74,10 @@ export function Footer() {
 
       {/* Contact and Subscription Section */}
       <div className="flex flex-col items-start gap-6 md:w-1/3 px-4 text-black font-inter">
-        <p className="text-xl font-semibold">Contact</p>
-        <p className="text-sm md:text-base">2nd floor,opposite townhall.budgawm-191111 Bharat</p>
-        <p className="text-sm md:text-base">6200035190/9682330263</p>
-        <p className="text-sm md:text-base">Contact@srikula.org</p>
+        <p className="text-xl font-semibold">CONTACT</p>
+        <p className="text-sm md:text-base">2nd floor, Opposite Townhall, Budgam-191111 Bharat</p>
+        <p className="text-sm md:text-base">Ph: 6200035190/9682330263</p>
+        <p className="text-sm md:text-base">contact@srikula.org</p>
 
         {/* Subscription Form */}
         <div className="flex flex-col gap-4 text-black font-inter">
