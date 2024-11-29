@@ -1,21 +1,18 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the hamburger menu
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const handleLogo = () =>{
-    navigate('/');
-  }
 
+  
   return (
     <nav className="bg-black font-inter text-white px-8 py-4">
       {/* Navbar Container */}
       <div className="flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex items-center" onClick={handleLogo}>
+        <div className="flex items-center">
           <img
             src={logo} // Replace with your logo path
             alt="Logo"
