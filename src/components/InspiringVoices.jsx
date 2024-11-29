@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import inspireBg from "../assets/inspiringVoiceImg/inspirationBg.png";
-import ajay from "../assets/inspiringVoiceImg/ajayRaina.png";
+import aadi from "../assets/inspiringVoiceImg/AadiAchint.jpg";
+import manjul from "../assets/inspiringVoiceImg/dr. sk manjul.png";
+import henna from "../assets/inspiringVoiceImg/henna.jpg";
 import ami from "../assets/inspiringVoiceImg/amiGanatra.png";
 import anuj from "../assets/inspiringVoiceImg/AnujDhar.png";
 import chandra from "../assets/inspiringVoiceImg/chandrachur.png";
 import ashok from "../assets/inspiringVoiceImg/drAshok.png";
-import pandey from "../assets/inspiringVoiceImg/genPandey.png";
+import pandey from "../assets/inspiringVoiceImg/DP_pandey.jpg";
 import javed from "../assets/inspiringVoiceImg/javedBeigh.png";
 import kallol from "../assets/inspiringVoiceImg/kallol.png";
 import kanwal from "../assets/inspiringVoiceImg/kanwal.png";
 import namrata from "../assets/inspiringVoiceImg/namrata.png";
-import rahul from "../assets/inspiringVoiceImg/RahulDewan.png";
 import raja from "../assets/inspiringVoiceImg/rajaMuneeb.png";
-import ramnik from "../assets/inspiringVoiceImg/ramnik.png"
-import ravindra from "../assets/inspiringVoiceImg/ravindraPandit.png";
+import ramnik from "../assets/inspiringVoiceImg/ramnik.png";
+import ravindra from "../assets/inspiringVoiceImg/ravinder pandit.jpg";
+import nilofer from "../assets/inspiringVoiceImg/prof. nilofer khan.jpg";
 import shela from "../assets/inspiringVoiceImg/shehla.png";
 import shiv from "../assets/inspiringVoiceImg/shivKunal.png";
 import quraisi from "../assets/inspiringVoiceImg/syQuraishi.png";
@@ -27,10 +29,10 @@ export const InspiringVoices = () => {
       image: pandey,
     },
     {
-      name: "Yana Mir",
-      role: "Kashmir First Female Blogger",
-      topic: "",
-      image: yana,
+      name: "Raja Muneeb",
+      role: "Journalist",
+      topic: "Columnist & Geo-political observer",
+      image: raja,
     },
     {
       name: "Amb. Kanwal Sibal",
@@ -39,22 +41,34 @@ export const InspiringVoices = () => {
       image: kanwal,
     },
     {
+      name: "Namrata Wakhloo",
+      role: "Author",
+      topic: "Chronicler & Photographer",
+      image: namrata,
+    },
+    {
       name: "Dr. Ashok Lahiri",
       role: "Former Chief Economic Advisor, Government of India",
       topic: "Economic Growth and Challenges in India",
       image: ashok,
     },
     {
-      name: "Raja Muneeb",
-      role: "Journalist",
-      topic: "Columnist & Geo-political observer",
-      image: raja,
+      name: "Dr. S.K. Manjul",
+      role: "Add'l DG",
+      topic: "Archaeological Survey of India",
+      image: manjul,
     },
     {
-      name: "Namrata Wakhloo",
-      role: "Author",
-      topic: "Chronicler & Photographer",
-      image: namrata,
+      name: "Kallol Bhattarcherjee",
+      role: "Author & Jounalist",
+      topic: "The Revival of Sanskrit Literature",
+      image: kallol,
+    },
+    {
+      name: "Shehla Rashid",
+      role: "Author, Speaker & Tech.",
+      topic: "Policy Consutant",
+      image: ashok,
     },
     {
       name: "S. Y. Quraishi",
@@ -63,10 +77,22 @@ export const InspiringVoices = () => {
       image: quraisi,
     },
     {
+      name: "Yana Mir",
+      role: "Kashmir First Female Blogger",
+      topic: "",
+      image: yana,
+    },
+    {
       name: "Javed Beigh",
       role: "Social Activist",
       topic: "Representing J&K at UN",
       image: javed,
+    },
+    {
+      name: "Ravinder Pandit",
+      role: "President",
+      topic: "Save Sharada Commitee & AIKS; Author",
+      image: ravindra,
     },
     {
       name: "Shiv Kunal Verma",
@@ -75,7 +101,13 @@ export const InspiringVoices = () => {
       image: shiv,
     },
     {
-      name: "Ramneek Singh Maan",
+      name: "Dr. Henana Berges",
+      role: "Poet, Stroryteller & Author",
+      topic: "",
+      image: henna,
+    },
+    {
+      name: "Ramnik Singh Maan",
       role: "Observer & Speaker",
       topic: "The Role of Sikh History in Modern India",
       image: ramnik,
@@ -93,10 +125,22 @@ export const InspiringVoices = () => {
       image: shela,
     },
     {
+      name: "Aadi Achint",
+      role: "Founder, DEF talks & Geopolitical Observer",
+      topic: "",
+      image: aadi,
+    },
+    {
       name: "Chandrachur Ghose",
       role: "Author & Researcher",
       topic: "Unsung Heroes of Indian Freedom Struggle",
       image: chandra,
+    },
+    {
+      name: "Prof. Nilofer Khan",
+      role: "Vice-Chancellor, Kashmir University",
+      topic: "",
+      image: nilofer,
     },
     {
       name: "Anuj Dhar",
@@ -106,6 +150,29 @@ export const InspiringVoices = () => {
     },
   ];
   const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
+  const scrollContainerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    let animationFrameId;
+
+    const scroll = () => {
+      if (!isPaused) {
+        scrollContainer.scrollLeft += 2;
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0; // Reset scroll
+        }
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    scroll();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [isPaused]);
 
   return (
     <div
@@ -125,8 +192,13 @@ export const InspiringVoices = () => {
       </div>
 
       {/* Scrolling Container */}
-      <div className="overflow-hidden">
-        <div className="flex space-x-4 animate-scrollSmInspire sm:animate-scroll">
+      <div
+        className="overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        ref={scrollContainerRef}
+      >
+        <div className="flex space-x-4">
           {[...speakers, ...speakers].map((speaker, index) => (
             <div
               key={index}
@@ -140,17 +212,36 @@ export const InspiringVoices = () => {
                 className="w-full h-[250px] object-cover rounded-lg"
               />
               <div className="p-4 text-center">
+                <h4 className="text-base font-bold text-black">
+                  {speaker.name}
+                </h4>
                 <h3 className="text-sm font-semibold text-black">
                   {speaker.role}
                 </h3>
-                <h4 className="text-base font-bold text-black">{speaker.name}</h4>
+               
               </div>
               {/* Popup for Speaker Details */}
               {hoveredSpeaker === index && (
-                <div className="absolute top-0 left-0 bg-white/90 p-4 w-full h-full flex flex-col justify-center items-center rounded-lg shadow-lg z-10">
-                  <h3 className="text-lg font-bold text-black">{speaker.name}</h3>
-                  <p className="text-sm text-black mt-2">{speaker.role}</p>
-                  <p className="text-sm text-black mt-2 italic">{speaker.topic}</p>
+                <div className="absolute top-0 left-0 bg-[#FBB59C] p-6 w-full h-full flex flex-col justify-center items-center rounded-lg shadow-lg z-10 border- border-blue-200">
+                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="w-24 h-30 object-cover"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold text-black text-center">
+                    {speaker.name}
+                  </h3>
+                  <p className="text-sm text-black mt-1 text-center">
+                    {speaker.role}
+                  </p>
+                  <p className="text-sm text-black mt-4 text-center">
+                    {speaker.topic}
+                  </p>
+                  <p className="text-xs text-black mt-4 text-center">
+                    {`The first edition of the Kashmir Literature Festival to be held on 7th & 8th of December, 2024 wishes an atmosphere.`}
+                  </p>
                 </div>
               )}
             </div>
