@@ -54,7 +54,7 @@ export const InstagramReels = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className="w-64 h-96 rounded-2xl border-y-[5px] border-[#DAF7FF] overflow-hidden relative  hover:scale-110"
+            className="w-64 h-96 rounded-2xl border-y-[5px] border-[#DAF7FF] overflow-hidden relative transition-transform duration-300 hover:-translate-y-2"
           >
             <img
               src={image}
