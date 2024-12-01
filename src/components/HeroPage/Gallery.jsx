@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import gallerBg from "../assets/gallery/galleryBg.png";
-import news1 from "../assets/gallery/Galleryimage1.png";
-import news2 from "../assets/gallery/gallertimage2.png";
-import news3 from "../assets/gallery/galleryimage3.png";
-import news4 from "../assets/gallery/galleryimage4.png";
+import gallerBg from "../../assets/gallery/galleryBg.png";
+import news1 from "../../assets/gallery/Galleryimage1.png";
+import news2 from "../../assets/gallery/gallertimage2.png";
+import news3 from "../../assets/gallery/galleryimage3.png";
+import news4 from "../../assets/gallery/galleryimage4.png";
 
 export const Gallery = () => {
   const images = [news1, news2, news3, news4];

@@ -50,7 +50,7 @@ export const KashmirLitFest = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-0">
         {data.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="rounded-3xl overflow-hidden">
+            <div className="rounded-3xl overflow-hidden hover:scale-105">
               <img
                 src={item.image}
                 alt={item.title}

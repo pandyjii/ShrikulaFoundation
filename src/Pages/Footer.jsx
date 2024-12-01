@@ -99,7 +99,7 @@ export function Footer() {
         </div>
         <div className="flex items-start gap-3">
           <FaPhoneAlt className="text-xl" />
-          <p className="text-sm md:text-base">Ph: 6200035190 / 9682330263</p>
+          <p className="text-sm md:text-base">+91 6200035190 / +91 9682330263</p>
         </div>       
         <div className="flex items-start gap-3">
           <FaEnvelope className="text-xl " />

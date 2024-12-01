@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import inspireBg from "../assets/Group 44493.png";
-
-
+import inspireBg from "../../assets/Group 44493.png";
 
 export function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     contactNumber: "",
-    message: "", // Added message field
+    message: "",
   });
 
-  const [error, setError] = useState(""); // For error handling
-  const [success, setSuccess] = useState(""); // For success message
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,7 +22,7 @@ export function ContactUs() {
       setError("Name, email, and contact number are required.");
       return false;
     }
-    setError(""); // Clear error if all fields are filled
+    setError("");
     return true;
   };
 
@@ -38,16 +36,12 @@ export function ContactUs() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            contactNumber: formData.contactNumber,
-          }), // Send only the required fields
+          body: JSON.stringify(formData),
         });
 
         if (response.ok) {
           setSuccess("Thank you for your message! We will get back to you soon.");
-          setFormData({ name: "", email: "", contactNumber: "", message: "" }); // Clear form
+          setFormData({ name: "", email: "", contactNumber: "", message: "" });
         } else {
           setError("Failed to submit the form. Please try again later.");
         }
@@ -60,12 +54,13 @@ export function ContactUs() {
 
   return (
     <div
-    className="relative bg-cover bg-center bg-no-repeat"
-    style={{ backgroundImage: `url(${inspireBg})` }}
-  >
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="bg-white p-8  shadow-lg w-[90vw] sm:w-[25vw] rounded-xl">
-        <h2 className="text-2xl font-bold text-center text-[#BA451C] mb-6">Contact Us</h2>
+      className="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center"
+      style={{ backgroundImage: `url(${inspireBg})` }}
+    >
+      <div className="bg-white p-6 sm:p-8 shadow-lg w-full max-w-lg rounded-lg mx-4">
+        <h2 className="text-2xl font-bold text-center text-[#BA451C] mb-6">
+          Contact Us
+        </h2>
 
         {/* Error and Success Messages */}
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
@@ -74,14 +69,16 @@ export function ContactUs() {
         <form onSubmit={handleSubmit}>
           {/* Name */}
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700">Name</label>
+            <label htmlFor="name" className="block text-gray-700 text-sm sm:text-base">
+              Name
+            </label>
             <input
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full p-3 border border-gray-300 rounded-md mt-2"
+              className="w-full p-2 border border-gray-300 rounded-md mt-1 text-sm sm:text-base"
               placeholder="Your Name"
               required
             />
@@ -89,14 +86,16 @@ export function ContactUs() {
 
           {/* Email */}
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700">Email</label>
+            <label htmlFor="email" className="block text-gray-700 text-sm sm:text-base">
+              Email
+            </label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full p-3 border border-gray-300 rounded-md mt-2"
+              className="w-full p-2 border border-gray-300 rounded-md mt-1 text-sm sm:text-base"
               placeholder="Your Email"
               required
             />
@@ -104,14 +103,16 @@ export function ContactUs() {
 
           {/* Contact Number */}
           <div className="mb-4">
-            <label htmlFor="contactNumber" className="block text-gray-700">Contact Number</label>
+            <label htmlFor="contactNumber" className="block text-gray-700 text-sm sm:text-base">
+              Contact Number
+            </label>
             <input
               type="tel"
               id="contactNumber"
               name="contactNumber"
               value={formData.contactNumber}
               onChange={handleInputChange}
-              className="w-full p-3 border border-gray-300 rounded-md mt-2"
+              className="w-full p-2 border border-gray-300 rounded-md mt-1 text-sm sm:text-base"
               placeholder="Your Contact Number"
               required
             />
@@ -119,13 +120,15 @@ export function ContactUs() {
 
           {/* Message */}
           <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700">Message</label>
+            <label htmlFor="message" className="block text-gray-700 text-sm sm:text-base">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              className="w-full p-3 border border-gray-300 rounded-md mt-2 h-32 resize-none"
+              className="w-full p-2 border border-gray-300 rounded-md mt-1 h-28 resize-none text-sm sm:text-base"
               placeholder="Your Message (Optional)"
             />
           </div>
@@ -133,13 +136,12 @@ export function ContactUs() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-[#BA451C] text-white font-medium py-2 rounded-md "
+            className="w-full bg-[#BA451C] text-white font-medium py-2 rounded-md hover:bg-[#9a3715] transition-all text-sm sm:text-base"
           >
             Send Message
           </button>
         </form>
       </div>
-    </div>
     </div>
   );
 }

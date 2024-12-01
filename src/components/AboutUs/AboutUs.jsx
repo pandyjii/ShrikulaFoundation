@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import visionImage from "../assets/aboutUs/aboutUs.png";
-import inspireBg from "../assets/klfCalender/calenderBg.png";
+import visionImage from "../../assets/aboutUs/aboutUs.png";
+import inspireBg from "../../assets/klfCalender/calenderBg.png";
 
 export function AboutUs() {
 

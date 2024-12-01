@@ -1,13 +1,13 @@
-import academy from "../assets/partner/academy.png";
-import sangam from "../assets/partner/sangamTalks.png";
-import smart from "../assets/partner/smart4bharat.png";
-import risingKashmir from "../assets/partner/risingKasmir.png";
-import rishi from "../assets/partner/rishiUniversity.png";
-import prachyam from "../assets/partner/PrachyamTV.png";
-import delhiUniversity from "../assets/partner/DULitFest.png";
-import urbanPandit from "../assets/partner/UrbanPandit.png";
-import gulshanBook from "../assets/partner/gulshanBook.png";
-import sabere from "../assets/partner/SabreandQuill.png";
+import academy from "../../assets/partner/academy.png";
+import sangam from "../../assets/partner/sangamTalks.png";
+import smart from "../../assets/partner/smart4bharat.png";
+import risingKashmir from "../../assets/partner/risingKasmir.png";
+import rishi from "../../assets/partner/rishiUniversity.png";
+import prachyam from "../../assets/partner/PrachyamTV.png";
+import delhiUniversity from "../../assets/partner/DULitFest.png";
+import urbanPandit from "../../assets/partner/UrbanPandit.png";
+import gulshanBook from "../../assets/partner/gulshanBook.png";
+import sabere from "../../assets/partner/SabreandQuill.png";
 
 const festivalPartners = [
   {

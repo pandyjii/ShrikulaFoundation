@@ -1,7 +1,7 @@
-import performanceBg from "../assets/performanceImg/performanceBg.png";
-import image1 from "../assets/performanceImg/Aiswarya.png";
-import image2 from "../assets/performanceImg/Aaha.png";
-import image3 from "../assets/WhatsApp Image 2024-11-27 at 13.22.51_e355e106.png";
+import performanceBg from "../../assets/performanceImg/performanceBg.png";
+import image1 from "../../assets/performanceImg/Aiswarya.png";
+import image2 from "../../assets/performanceImg/Aaha.png";
+import image3 from "../../assets/WhatsApp Image 2024-11-27 at 13.22.51_e355e106.png";
 
 const CulturalPerformances = () => {
   // Array of card data

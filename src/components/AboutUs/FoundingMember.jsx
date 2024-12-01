@@ -1,6 +1,6 @@
-import visionImage from "../assets/aboutUs/aboutUs.png";
-import madav from "../assets/madav.png";
-import yovraj from "../assets/youvraj.png";
+import visionImage from "../../assets/aboutUs/aboutUs.png";
+import madav from "../../assets/madav.png";
+import yovraj from "../../assets/youvraj.png";
 
 export function FoundingMember() {
   return (
