@@ -1,5 +1,5 @@
-import display from "../assets/display.mp4";
-import displayText from "../assets/displayText.png";
+import display from "../../assets/display.mp4";
+import displayText from "../../assets/displayText.png";
 
 export const DisplayPage = () => {
   return (

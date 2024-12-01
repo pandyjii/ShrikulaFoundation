@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import book from "../assets/book.png";
 export const AboutKLF = () => {
   const navigate = useNavigate();
   const handleClick = () => {

@@ -39,7 +39,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? " border-b-2 border-white"
-                : "hover:"
+                : " hover:scale-110"
             }
           >
             Home
@@ -49,7 +49,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? " border-b-2 border-white"
-                : "hover:"
+                : " hover:scale-110"
             }
           >
             KLF 2024
@@ -59,7 +59,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? " border-b-2 border-white"
-                : "hover:"
+                : " hover:scale-110"
             }
           >
             Srikula
@@ -69,7 +69,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? " border-b-2 border-white"
-                : "hover:"
+                : " hover:scale-110"
             }
           >
             Contact Us
@@ -79,7 +79,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               isActive
                 ? " border-b-0 border-white"
-                : "hover:"
+                : " hover:scale-110"
             }
           >
             Gallery

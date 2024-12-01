@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import leftLeave from '../assets/leftLeaves.png';
-import rightLeave from '../assets/rightLeaves.png';
+import leftLeave from '../../assets/leftLeaves.png';
+import rightLeave from '../../assets/rightLeaves.png';
 
 export const CountDownTimer = () => {
   const calculateTimeLeft = () => {

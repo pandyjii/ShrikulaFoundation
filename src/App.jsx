@@ -1,12 +1,12 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { MainLayout } from "./mainLayout"
-import { Hero } from "./components/HeroSection"
-import { ContactUs } from "./components/ContactUs"
+import { Hero } from "./components/HeroPage/HeroSection"
+import { ContactUs } from "./components/ContactUs/ContactUs"
 import { KLF2024 } from "./components/KLFPage/KLF2024"
-import { ShrikulaDonation } from "./components/DonatePage"
-import { AboutUs } from "./components/AboutUs"
-import { AboutHeroSection } from "./components/AboutHeroSection"
+import { ShrikulaDonation } from "./components/Donate/DonatePage"
+import { AboutUs } from "./components/AboutUs/AboutUs"
+import { AboutHeroSection } from "./components/AboutUs/AboutHeroSection"
 export default function App() {
   return (
   <BrowserRouter>

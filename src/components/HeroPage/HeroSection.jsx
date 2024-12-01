@@ -1,14 +1,14 @@
 import { AboutKLF } from "./AboutKLF";
 import { CountDownTimer } from "./CountDownTimer";
-import CulturalPerformances from "./CulturalPerformances";
 import { DisplayPage } from "./DisplayPage";
 import { Gallery } from "./Gallery";
 import { InspiringVoices } from "./InspiringVoices";
 import { InstagramReels } from "./InstagramReel";
 import { NewsMedia } from "./NewMedia";
 import { FestivalPartners } from "./PartnerPage";
-import leafsBg from "../assets/klfBg.png";
+import leafsBg from "../../assets/klfBg.png";
 import { useEffect } from "react";
+import CulturalPerformances from "./CulturalPerformances";
 
 export function Hero() {
 

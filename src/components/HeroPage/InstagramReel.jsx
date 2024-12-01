@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-import image1 from "../assets/instagram/post1.png";
-import image2 from "../assets/instagram/post2.png";
-import image3 from "../assets/instagram/post3.png";
-import image4 from "../assets/instagram/post4.png";
+import image1 from "../../assets/instagram/post1.png";
+import image2 from "../../assets/instagram/post2.png";
+import image3 from "../../assets/instagram/post3.png";
+import image4 from "../../assets/instagram/post4.png";
 
 export const InstagramReels = () => {
   const reelContainerRef = useRef(null);
