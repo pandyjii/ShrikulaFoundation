@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bgImage from '../../assets/gallery/galleryBg.png'
 import logo from '../../assets/srikulalogo.png'
+import paymentBg from '../../assets/paymetBg.png'
 export function ShrikulaDonation() {
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState(""); // State for the note input
@@ -84,65 +85,70 @@ export function ShrikulaDonation() {
 
   return (
     <div
-      className="flex justify-center items-center  min-h-screen bg-cover bg-center"
+      className="flex justify-center items-center min-h-screen bg-cover bg-center font-inter"
       style={{ backgroundImage: `url(${bgImage})` }}
-    > 
-      <div className="flex flex-col justify-center items-center">
-      <h2 className="text-xl font-bold text-gray-800 mt-1 animate-slideIn">Kashmir Literature Festival, A Srikula Foundation initiative.</h2>
-      <div className="bg-white rounded-lg p-6 w-[90%] max-w-md text-center shadow-lg mt-8">
-        {/* Logo Section */}
-        <div className="w-16 h-16 text-white rounded-full mx-auto flex items-center justify-center mb-4">
-          <img src={logo} alt="logo"/>
-        </div>
+    >
 
-        {/* Title Section */}
-        <h3 className="text-lg font-medium text-gray-600">Paying</h3>
-        <p className="text-sm text-blue-500 mt-2">razorpay.me/@srikulafoundation</p>
+      <div className="flex flex-col items-center text-center mt-10 sm:w-[50vw]">
+        {/* Header */}
+        <h2 className="text-3xl font-bold text-black font-comic">
+          Kashmir Literature Festival
+        </h2>
+        <p className="text-base text-black mt-1 font-semibold">
+          A Srikula Foundation initiative
+        </p>
+        {/* Donation Card */}
+        <div className=" p-6 text-center mt-8 relative">
+          <div>
+            <img src={paymentBg} className="w-[90vw] h-[70vh] sm:h-[40vh] lg:w-[30vw] lg:h-[90vh]"/>
+          </div>
+          <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
+          {/* Logo */}
+          <div className="w-12 h-12 mx-auto mb-4 bg-white shadow-md">
+            <img src={logo} alt="logo" className="w-full h-full" />
+          </div>
 
-        {/* Donation Amount Input */}
-        <div className="flex items-center justify-center mt-6">
-          <span className="text-3xl text-gray-800">₹</span>
+          {/* Title Section */}
+          <h3 className="text-lg font-medium text-gray-700">Paying</h3>
+          <h2 className="text-xl font-bold text-gray-800 mt-1 sm:w-[300px]">
+            SRIKULA FOUNDATION
+          </h2>
+          <p className="text-sm text-blue-500 mt-2">
+            razorpay.me/@srikulafoundation
+          </p>
+          
+          {/* Donation Amount Input */}
+          <div className="flex items-center justify-center mt-6">
+            <span className="text-3xl text-gray-800">₹</span>
+            <input
+              type="text"
+              value={amount}
+              onChange={(e) =>
+                setAmount(e.target.value.replace(/[^0-9]/g, ""))
+              }
+              className="text-3xl outline-none w-20 text-center border-b-2 border-gray-300 focus:border-blue-500"
+              placeholder="0"
+            />
+          </div>
+
+          {/* Note Input */}
           <input
             type="text"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value.replace(/[^0-9]/g, ""))}
-            className="text-3xl outline-none w-20 text-center border-b-2 border-gray-300 focus:border-blue-500"
-            placeholder="0"
+            placeholder="Add a note"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+            className="w-[80%] bg-gray-100 text-black text-center mt-4 mb-4 py-1 rounded focus:outline-none "
           />
+
+          {/* Submit Button */}
+          <button
+            onClick={handleDonation}
+            className="w-full bg-[#BA451C] text-white font-medium rounded-md py-2 mt-3 hover:bg-[#9a3715] transition-all"
+          >
+            Pay ₹{amount || 0}
+          </button>
+          </div>
         </div>
-
-        {/* Note Input */}
-        <input
-          type="text"
-          placeholder="Add a note"
-          value={note}
-          onChange={(e) => setNote(e.target.value)}
-          className="w-full border bg-gray-100 text-black text-center mt-5 mb-5 py-1 rounded"
-        />
-
-        {/* Submit Button */}
-        <button
-          onClick={handleDonation}
-          className="w-full bg-[#BA451C] text-white font-medium rounded-md py-2 mt-4 hover:bg-[#9a3715] transition-all"
-        >
-          Pay ₹{amount || 0}
-        </button>
-
-        {/* Footer Section */}
-        <div className="mt-6 text-xs text-gray-500">
-          <p>Want to accept online payments for your business?</p>
-          <p>
-            Visit{" "}
-            <a
-              href="https://razorpay.com"
-              className="text-blue-500 hover:underline"
-            >
-              razorpay.com
-            </a>{" "}
-            to get started!
-          </p>
-        </div>
-      </div>
       </div>
 
       {/* Popup Section */}

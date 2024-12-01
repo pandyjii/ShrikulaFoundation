@@ -14,8 +14,6 @@ export const NewsMedia = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true); // Set to true when the component is in view
-        } else {
-          setIsVisible(false); // Reset when out of view (optional)
         }
       },
       { threshold: 0.2 } // Trigger when 20% of the component is visible
@@ -85,7 +83,7 @@ export const NewsMedia = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full  "
+                className="w-full "
               />
               <div className="py-4">
                 <h3 className="text-sm font-semibold text-[#000000]">

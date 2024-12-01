@@ -57,7 +57,7 @@ export function ContactUs() {
       className="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center"
       style={{ backgroundImage: `url(${inspireBg})` }}
     >
-      <div className="bg-white p-6 sm:p-8 shadow-lg w-full max-w-lg rounded-lg mx-4">
+      <div className="bg-white p-6 sm:p-8 shadow-lg w-full max-w-lg rounded-lg mx-4 h-full">
         <h2 className="text-2xl font-bold text-center text-[#BA451C] mb-6">
           Contact Us
         </h2>
@@ -128,7 +128,7 @@ export function ContactUs() {
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              className="w-full p-2 border border-gray-300 rounded-md mt-1 h-28 resize-none text-sm sm:text-base"
+              className="w-full p-2 border border-gray-300 rounded-md mt-1 resize-none text-sm sm:text-base"
               placeholder="Your Message (Optional)"
             />
           </div>

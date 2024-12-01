@@ -14,7 +14,7 @@ export const AboutKLF = () => {
           <div className="space-y-6 sm:text-lg">
           <p className="text-white">
             The first edition of the Kashmir Literature Festival to be held on
-            7th & 8th of December, 2024.KLF wishes an atmosphere to allow
+            7th & 8th of December, 2024. KLF wishes an atmosphere to allow
             inter-mixing of ideas, literature, culture, common inheritance &
             diverse philosophies.
           </p>
