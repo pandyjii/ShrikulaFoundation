@@ -1,39 +1,57 @@
 import calenderBg from "../../assets/klfCalender/calenderBg.png";
 import leafs from "../../assets/klfCalender/claenderLeafs.png";
-import image2 from "../../assets/klfCalender/image2.png";
-import image3 from "../../assets/klfCalender/image3.png";
-import image1 from "../../assets/klfCalender/image31.png";
+import kashmirC from "../../assets/klfCalender/kashmirCoisine.png";
+import exprience from "../../assets/klfCalender/experience.png";
+import book from "../../assets/klfCalender/bookLaunch.png";
+import music from "../../assets/klfCalender/music.png";
+import dialouge from "../../assets/klfCalender/dialouges.png";
+import engaging from "../../assets/klfCalender/engaging.png";
 
 export const KlfCalender = () => {
   // Array of content items
   const calendarItems = [
     {
       id: 1,
-      image: image1,
+      image: book,
       title: "Book Launch & Discussions",
     },
     {
       id: 2,
-      image: image2,
-      title: "Exploring Mysticism",
+      image: exprience,
+      title: "Experience the Dal Lake view",
     },
     {
       id: 3,
-      image: image3,
-      title: "Combat Performances",
+      image: kashmirC,
+      title: "Kashmiri Cuisine ",
+    },
+    {
+      id: 4,
+      image: dialouge,
+      title: "Dialogues and Interactions",
+    },
+    {
+      id: 5,
+      image: engaging,
+      title: "Exhibitions and Bookstores ",
+    },
+    {
+      id: 6,
+      image: music,
+      title: "Cultural Gala Evenings",
     },
   ];
 
   return (
     <div
-      className="relative bg-cover bg-center min-h-screen md:min-h-[55vh] lg:min-h-screen"
+      className="relative bg-cover bg-center min-h-screen md:min-h-[55vh] lg:min-h-screen pb-10"
       style={{ backgroundImage: `url(${calenderBg})` }}
     >
       <div className="w-full h-full bg-white bg-opacity-30 flex flex-col justify-center items-center text-black font-inter">
         {/* Header Section */}
         <div className="flex flex-col items-center justify-center mb-4 mt-8">
           <h1 className="text-2xl md:text-4xl font-bold">#KLF2024 Calendar</h1>
-          <p className="text-lg md:text-xl mt-2 font-semibold">7th December</p>
+          <p className="text-lg md:text-xl mt-2 font-semibold">7th & 8th December</p>
           <div className="flex mt-2 items-center">
             <img src={leafs} alt="leaf" className="-rotate-45 h-10"/>
             <p className="text-lg">Theme:</p>
