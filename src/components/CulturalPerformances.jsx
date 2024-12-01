@@ -49,13 +49,13 @@ const CulturalPerformances = () => {
               key={index}
               className="snap-center flex-shrink-0 text-center mx-2"
             >
-              <div className="w-64 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative">
+              <div className="w-64 h-96 bg-black rounded-2xl border-[5px] border-[#DAF7FF] overflow-hidden group relative  hover:scale-110">
                 <img
                   className="w-full h-full object-cover"
                   src={card.imageSrc}
                   alt={card.title}
                 />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center w-[200px]">
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="text-sm">{card.description}</p>
                 </div>
