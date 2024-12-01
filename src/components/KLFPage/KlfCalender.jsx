@@ -66,7 +66,7 @@ export const KlfCalender = () => {
         <div className="grid grid-cols-1 md:grid-cols-3">
           {calendarItems.map((item) => (
             <div key={item.id} className="p-2 text-center">
-              <div className="rounded-3xl border-[1px] border-white overflow-hidden">
+              <div className="rounded-3xl border-[1px] border-white overflow-hidden hover:scale-105">
                     <img
                     src={item.image}
                     alt={item.title}

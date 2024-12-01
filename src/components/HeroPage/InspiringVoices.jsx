@@ -10,14 +10,14 @@ import ashok from "../../assets/inspiringVoiceImg/drAshok.png";
 import pandey from "../../assets/inspiringVoiceImg/dp pandey.png";
 import javed from "../../assets/inspiringVoiceImg/javedBeigh.png";
 // import kallol from "../assets/inspiringVoiceImg/kallol.png";
-import kanwal from "../../assets/inspiringVoiceImg/kanwal.png";
+import kanwal from "../../assets/newsMedia/kanwal.png";
 import namrata from "../../assets/inspiringVoiceImg/namrata.png";
 import raja from "../../assets/inspiringVoiceImg/rajaMuneeb.png";
 import ramnik from "../../assets/inspiringVoiceImg/ramneek singh maan.png";
 import ravindra from "../../assets/inspiringVoiceImg/ravindra.png";
 import nilofer from "../../assets/inspiringVoiceImg/nilofer khan.png";
 import shela from "../../assets/inspiringVoiceImg/shehla rashid.png";
-import shiv from "../../assets/inspiringVoiceImg/shivKunal.png";
+import shiv from "../../assets/inspiringVoiceImg/shiv-kunal-verma.jpg";
 import quraisi from "../../assets/inspiringVoiceImg/syQuraishi.png";
 import yana from "../../assets/inspiringVoiceImg/yanaMir.png";
 import Kallol from "../../assets/Kallol.png"
@@ -204,7 +204,7 @@ export const InspiringVoices = () => {
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className="w-full h-[250px] object-cover rounded-lg"
+                className="w-full h-[310px] object-cover rounded-lg"
               />
               <div className="p-4 text-center">
                 <h4 className="text-base font-bold text-black">
