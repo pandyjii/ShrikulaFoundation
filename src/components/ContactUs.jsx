@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import inspireBg from "../assets/Group 44493.png";
+
+
 
 export function ContactUs() {
   const [formData, setFormData] = useState({
@@ -56,9 +59,13 @@ export function ContactUs() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
+    <div
+    className="relative bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${inspireBg})` }}
+  >
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="bg-white p-8  shadow-lg w-[90vw] sm:w-[25vw] rounded-xl">
+        <h2 className="text-2xl font-bold text-center text-[#BA451C] mb-6">Contact Us</h2>
 
         {/* Error and Success Messages */}
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
@@ -132,6 +139,7 @@ export function ContactUs() {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

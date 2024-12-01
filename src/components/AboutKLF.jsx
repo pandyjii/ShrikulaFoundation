@@ -6,7 +6,7 @@ export const AboutKLF = () => {
       navigate('/klf2024');
   }
   return (
-    <div className=" bg-black bg-opacity-50">
+    <div className="">
       <div className="px-8 py-14 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center  gap-10">
         {/* Text Section */}
         <div className="md:w-[80%] text-center md:text-left space-y-2">
@@ -15,7 +15,7 @@ export const AboutKLF = () => {
           <div className="space-y-6 sm:text-lg">
           <p className="text-white">
             The first edition of the Kashmir Literature Festival to be held on
-            7th & 8th of December, 2024 wishes an atmosphere to allow
+            7th & 8th of December, 2024.KLF wishes an atmosphere to allow
             inter-mixing of ideas, literature, culture, common inheritance &
             diverse philosophies.
           </p>

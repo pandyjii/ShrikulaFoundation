@@ -23,7 +23,7 @@ export function Hero() {
       <div className="fixed top-0 left-0 w-full h-screen -z-10">
         {/* Background Image */}
         <div
-          className="w-full h-full bg-cover bg-center"
+          className="w-full h-full bg-cover bg-center  opacity-45"
           style={{ backgroundImage: `url(${leafsBg})` }}
         ></div>
         {/* Black Overlay */}

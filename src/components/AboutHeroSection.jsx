@@ -7,7 +7,7 @@ export function AboutHeroSection(){
     <div>
         <AboutUs/>
         <FoundingMember/>
-        <KlfBuildingBloks/>
+        {/* <KlfBuildingBloks/> */}
     </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the hamburger menu
 import logo from "../assets/logo.png";
 
@@ -12,13 +12,13 @@ const Navbar = () => {
       {/* Navbar Container */}
       <div className="flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex items-center">
+        <Link to ={'/'} className="flex items-center">
           <img
             src={logo} // Replace with your logo path
             alt="Logo"
             className="h-10 w-10 rounded-full"
           />
-        </div>
+        </Link>
 
         {/* Hamburger Icon (Mobile) */}
         <div
@@ -62,7 +62,7 @@ const Navbar = () => {
                 : "hover:"
             }
           >
-            About Us
+            Srikula
           </NavLink>
           <NavLink
             to="/contact"
@@ -131,7 +131,7 @@ const Navbar = () => {
             }
             onClick={() => setIsMenuOpen(false)}
           >
-            About Us
+          Srikula
           </NavLink>
           <NavLink
             to="/contact"
