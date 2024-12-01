@@ -89,7 +89,7 @@ export function ShrikulaDonation() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
 
-      <div className="flex flex-col items-center text-center mt-10 sm:w-[50vw]">
+      <div className="flex flex-col items-center text-center mt-10 sm:w-[40vw]">
         {/* Header */}
         <h2 className="text-3xl font-bold text-black font-comic">
           Kashmir Literature Festival
@@ -100,7 +100,7 @@ export function ShrikulaDonation() {
         {/* Donation Card */}
         <div className=" p-6 text-center mt-8 relative">
           <div>
-            <img src={paymentBg} className="w-[90vw] h-[70vh] sm:h-[40vh] lg:w-[30vw] lg:h-[90vh]"/>
+            <img src={paymentBg} className="w-[90vw] h-[70vh] sm:h-[40vh] lg:w-[25vw] lg:h-[80vh]"/>
           </div>
           <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
           {/* Logo */}
@@ -118,18 +118,21 @@ export function ShrikulaDonation() {
           </p>
           
           {/* Donation Amount Input */}
+          <div className=" flex flex-col gap-9 items-center ">
           <div className="flex items-center justify-center mt-6">
-            <span className="text-3xl text-gray-800">₹</span>
-            <input
-              type="text"
-              value={amount}
-              onChange={(e) =>
-                setAmount(e.target.value.replace(/[^0-9]/g, ""))
-              }
-              className="text-3xl outline-none w-20 text-center border-b-2 border-gray-300 focus:border-blue-500"
-              placeholder="0"
-            />
-          </div>
+  <div className="flex items-center gap-2">
+    <p className="text-3xl text-gray-800 relative  left-5">₹</p>
+    <input
+      type="text"
+      value={amount}
+      onChange={(e) =>
+        setAmount(e.target.value.replace(/[^0-9]/g, ""))
+      }
+      className="text-3xl text-center outline-none w-24"
+      placeholder="0"
+    />
+  </div>
+</div>
 
           {/* Note Input */}
           <input
@@ -147,6 +150,7 @@ export function ShrikulaDonation() {
           >
             Pay ₹{amount || 0}
           </button>
+          </div>
           </div>
         </div>
       </div>
