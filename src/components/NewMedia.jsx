@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import newsBg from "../assets/newsMedia/mediaBg.png";
-import news1 from "../assets/newsMedia/news1.png";
-import news2 from "../assets/newsMedia/news2.png";
-import news3 from "../assets/newsMedia/news3.png";
-import news4 from "../assets/newsMedia/news4.png";
+import news1 from "../assets/newsMedia/image 106.png";
+import news2 from "../assets/newsMedia/image 104.png";
+import news3 from "../assets/newsMedia/Group 44496.png";
+import news4 from "../assets/newsMedia/image 103 (1).png";
 
 export const NewsMedia = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,8 +63,8 @@ export const NewsMedia = () => {
     >
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-3xl lg:text-4xl font-bold text-black text-start mb-8 font-inter">
-          News Media
+        <h2 className="text-3xl lg:text-4xl    text-center mb-8 font-inter">
+          Media Coverage
         </h2>
 
         {/* News Cards */}
@@ -85,7 +85,7 @@ export const NewsMedia = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-56 sm:h-48"
+                className="w-full  "
               />
               <div className="py-4">
                 <h3 className="text-sm font-semibold text-[#000000]">

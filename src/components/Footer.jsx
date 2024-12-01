@@ -1,11 +1,15 @@
 
 import instagram from "../assets/footer/Instagram.png";
 import facebook from "../assets/footer/Facebook.png";
+import twitter from "../assets/footer/twitter.png"
 import footerBg from "../assets/footer/footerBg.png";
+import { Link } from "react-router-dom";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaGlobe } from "react-icons/fa";
+
 export function Footer() {
   return (
     <div
-      className="w-full flex flex-col md:flex-row justify-center py-14 sm:py-10 gap-10 md:pl-10 relative"
+      className=" flex flex-col md:flex-row justify-center py-14 sm:py-10 gap-10 sm:px-18 md:pl-10 relative"
       style={{
         backgroundImage: `url(${footerBg})`,
         backgroundSize: "cover",
@@ -35,26 +39,14 @@ export function Footer() {
       </div>
 
       {/* Company and Resources Section */}
-      <div className="flex flex-col items-start gap-6 md:w-1/3 px-4 text-black font-inter">
-        <div className="flex flex-wrap justify-between w-full gap-6">
+      <div className="flex flex-col items-start gap-6 md:w-[50vw] px-4 text-black font-inter">
+        <div className="flex flex-wrap justify-center  items-center w-full gap-36">
+
           {/* Company Links */}
-          <div className="flex flex-col gap-4">
-            <p className="text-xl font-semibold">COMPANY</p>
-            <p className="text-sm md:text-base">Home</p>
-            <p className="text-sm md:text-base">Srikula</p>
-          </div>
-
-          {/* Resources Links */}
-          <div className="flex flex-col gap-4">
-            <p className="text-xl font-semibold">RESOURCES</p>
-            <p className="text-sm md:text-base">Blog</p>
-            <p className="text-sm md:text-base">Events</p>
-            <p className="text-sm md:text-base">Books</p>
-          </div>
-        </div>
-
-        {/* Social Media Icons */}
-        <div className="flex items-center w-full gap-7 py-4">
+          <div className="flex flex-col gap-6">
+            <p className="text-xl font-semibold"></p>
+            <Link to={'/'} className="text-sm md:text-base">Home</Link>
+            <div className="flex items-center w-full gap-7 py-4">
           <a
             href="https://www.facebook.com/share/17We5HFBxg/?mibextid=LQQJ4d"
             target="_blank"
@@ -69,16 +61,50 @@ export function Footer() {
           >
             <img src={instagram} alt="Instagram Icon" className="h-8 w-8" />
           </a>
+          <a
+            href="http://www.x.com/kashmirlitfest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={twitter} alt="Instagram Icon" className="h-8 w-8" />
+          </a>
         </div>
+          </div>
+
+          {/* Resources Links */}
+          <div className="flex flex-col gap-4">
+            <p className="text-xl font-semibold"></p>
+            <p className="text-sm md:text-base">Blog</p>
+            <p className="text-sm md:text-base">Events</p>
+            <p className="text-sm md:text-base">Books</p>
+          </div>
+        </div>
+
+        {/* Social Media Icons */}
+       
       </div>
 
       {/* Contact and Subscription Section */}
-      <div className="flex flex-col items-start gap-6 md:w-1/3 px-4 text-black font-inter">
-        <p className="text-xl font-semibold">CONTACT</p>
-        <p className="text-sm md:text-base">2nd floor, Opposite Townhall, Budgam-191111 Bharat</p>
-        <p className="text-sm md:text-base">Ph: 6200035190/9682330263</p>
-        <p className="text-sm md:text-base">contact@srikula.org</p>
-
+      <div className="flex flex-col items-start gap-4 md:w-1/3 px-4 text-black font-inter">
+        <p className="text-xl font-semibold">Parent</p>
+        <div className="flex items-start gap-3">
+        <FaGlobe className="text-xl " />
+        <Link to={'/about'} className="text-sm md:text-base">Srikula</Link>
+        </div>
+        <div className="flex items-start gap-3">
+          <FaMapMarkerAlt className="text-xl " />
+          <p className="text-sm md:text-base">
+            At Dal Lakefront, SKICC, Srinagar, Bharat, 24800
+          </p>
+        </div>
+        <div className="flex items-start gap-3">
+          <FaPhoneAlt className="text-xl" />
+          <p className="text-sm md:text-base">Ph: 6200035190 / 9682330263</p>
+        </div>       
+        <div className="flex items-start gap-3">
+          <FaEnvelope className="text-xl " />
+          <p className="text-sm md:text-base">contact@srikula.org</p>
+        </div>
         {/* Subscription Form */}
         <div className="flex flex-col gap-4 text-black font-inter">
           <p className="text-lg md:text-xl">Subscribe for More News</p>

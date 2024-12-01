@@ -1,25 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import inspireBg from "../assets/inspiringVoiceImg/inspirationBg.png";
-import aadi from "../assets/inspiringVoiceImg/AadiAchint.jpg";
+import aadi from "../assets/inspiringVoiceImg/aadi.png";
 import manjul from "../assets/inspiringVoiceImg/dr. sk manjul.png";
-import henna from "../assets/inspiringVoiceImg/henna.jpg";
+import henna from "../assets/inspiringVoiceImg/henana.png";
 import ami from "../assets/inspiringVoiceImg/amiGanatra.png";
 import anuj from "../assets/inspiringVoiceImg/AnujDhar.png";
 import chandra from "../assets/inspiringVoiceImg/chandrachur.png";
 import ashok from "../assets/inspiringVoiceImg/drAshok.png";
-import pandey from "../assets/inspiringVoiceImg/DP_pandey.jpg";
+import pandey from "../assets/inspiringVoiceImg/dp pandey.png";
 import javed from "../assets/inspiringVoiceImg/javedBeigh.png";
-import kallol from "../assets/inspiringVoiceImg/kallol.png";
+// import kallol from "../assets/inspiringVoiceImg/kallol.png";
 import kanwal from "../assets/inspiringVoiceImg/kanwal.png";
 import namrata from "../assets/inspiringVoiceImg/namrata.png";
 import raja from "../assets/inspiringVoiceImg/rajaMuneeb.png";
-import ramnik from "../assets/inspiringVoiceImg/ramnik.png";
-import ravindra from "../assets/inspiringVoiceImg/ravinder pandit.jpg";
-import nilofer from "../assets/inspiringVoiceImg/prof. nilofer khan.jpg";
-import shela from "../assets/inspiringVoiceImg/shehla.png";
+import ramnik from "../assets/inspiringVoiceImg/ramneek singh maan.png";
+import ravindra from "../assets/inspiringVoiceImg/ravindra.png";
+import nilofer from "../assets/inspiringVoiceImg/nilofer khan.png";
+import shela from "../assets/inspiringVoiceImg/shehla rashid.png";
 import shiv from "../assets/inspiringVoiceImg/shivKunal.png";
 import quraisi from "../assets/inspiringVoiceImg/syQuraishi.png";
 import yana from "../assets/inspiringVoiceImg/yanaMir.png";
+import Kallol from "../assets/Kallol.png"
 export const InspiringVoices = () => {
   const speakers = [
     {
@@ -30,7 +31,7 @@ export const InspiringVoices = () => {
     },
     {
       name: "Raja Muneeb",
-      role: "Journalist",
+      role: "Journalist, Columnist & Geo-political observer",
       topic: "Columnist & Geo-political observer",
       image: raja,
     },
@@ -42,7 +43,7 @@ export const InspiringVoices = () => {
     },
     {
       name: "Namrata Wakhloo",
-      role: "Author",
+      role: "Author Chronicler & Photographer",
       topic: "Chronicler & Photographer",
       image: namrata,
     },
@@ -54,7 +55,7 @@ export const InspiringVoices = () => {
     },
     {
       name: "Dr. S.K. Manjul",
-      role: "Add'l DG",
+      role: "Add'l DG, Archaeological Survey of India ",
       topic: "Archaeological Survey of India",
       image: manjul,
     },
@@ -62,13 +63,7 @@ export const InspiringVoices = () => {
       name: "Kallol Bhattarcherjee",
       role: "Author & Jounalist",
       topic: "The Revival of Sanskrit Literature",
-      image: kallol,
-    },
-    {
-      name: "Shehla Rashid",
-      role: "Author, Speaker & Tech.",
-      topic: "Policy Consutant",
-      image: ashok,
+      image: Kallol,
     },
     {
       name: "S. Y. Quraishi",
@@ -78,19 +73,19 @@ export const InspiringVoices = () => {
     },
     {
       name: "Yana Mir",
-      role: "Kashmir First Female Blogger",
+      role: "Kashmir's First Female Vlogger",
       topic: "",
       image: yana,
     },
     {
       name: "Javed Beigh",
-      role: "Social Activist",
+      role: "Social Activist, Representing J&K at UN",
       topic: "Representing J&K at UN",
       image: javed,
     },
     {
-      name: "Ravinder Pandit",
-      role: "President",
+      name: "Ravinder Pandita",
+      role: "President - Save Sharada Commitee & AIKS; Author",
       topic: "Save Sharada Commitee & AIKS; Author",
       image: ravindra,
     },
@@ -183,7 +178,7 @@ export const InspiringVoices = () => {
       <div className="w-full flex flex-col justify-center items-center mb-10">
         <div className="bg-[#FBB59C] w-fit px-4 py-3 text-center">
           <h2 className="text-2xl lg:text-4xl font-bold text-black">
-            Meet Our Inspiring Voices
+            Meet Our Speakers
           </h2>
         </div>
         <p className="mt-4 text-lg text-black text-center">

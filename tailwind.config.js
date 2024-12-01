@@ -12,7 +12,7 @@ export default {
       },
       animation: {
         scroll: "scroll 22s linear infinite",
-        scroll2: "scroll 30s linear infinite",
+        scroll2: "scroll 20s linear infinite",
         scrollSm: "scroll 20s linear infinite",
         scrollSmInspire: "scroll 8s linear infinite",
         fadeIn: "fadeIn 3s ease-out",
@@ -29,7 +29,7 @@ export default {
         },
         scrollSm: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         scrollSmInspire: {
           "0%": { transform: "translateX(0%)" },

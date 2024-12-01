@@ -10,6 +10,7 @@ export const DisplayPage = () => {
         autoPlay
         loop
         muted
+        playsInline // Ensure inline playback on iOS
       >
         <source src={display} type="video/mp4" />
         Your browser does not support the video tag.
@@ -25,7 +26,7 @@ export const DisplayPage = () => {
         />
 
         {/* Marquee Bottom Text */}
-        <div className="absolute bottom-6 w-[50vw] overflow-hidden">
+        <div className="absolute bottom-6 w-[100vw] sm:w-[50vw] overflow-hidden">
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base text-center px-4 text-black font-inter font-semibold">
             7th & 8th of December 2024 at Dal Lakefront, SKICC, Srinagar, Bharat
           </div>

@@ -1,74 +1,75 @@
-import React from "react";
+import React, { useEffect } from "react";
 import visionImage from "../assets/aboutUs/aboutUs.png";
+import inspireBg from "../assets/klfCalender/calenderBg.png";
 
 export function AboutUs() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top-left corner of the window
+  }, []);
+  
+
   return (
-    <div className="bg-gray-50 py-10 px-4 lg:px-20">
+    <div
+    className="relative bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${inspireBg})` }}
+  >
+    <div className=" py-10 px-6 lg:px-16">
       {/* Section Title */}
-      <h1 className="text-center text-3xl font-bold text-gray-800 mb-10">
+      <h1 className="text-center text-3xl lg:text-4xl font-bold text-gray-800 mb-8 lg:mb-12">
         OUR VISION
       </h1>
 
       {/* Content Wrapper */}
-      <div className="flex flex-col lg:flex-row items-center gap-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
         {/* Text Content */}
-        <div className="lg:w-2/3 space-y-6 text-gray-700">
-          <h2 className="text-4xl font-bold text-gray-900">CREATING STRENGTH</h2>
-          <h3 className="text-xl font-medium text-gray-600">
-            The world respects you, when you respect yourself.
+        <div className="lg:w-[33vw] space-y-6 text-gray-700">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+            CREATING STRENGTH
+          </h2>
+          <h3 className="text-lg lg:text-xl font-medium text-gray-600">
+            The world respects you when you respect yourself.
           </h3>
-          <p>
+          <p className="leading-relaxed">
             The indigenous rich culture of Bharat has suffered grave humiliation
             in the past few centuries. Our dharma was mocked, our Gurukuls were
-            forced to shut, our people were stripped from their possessions and
-            many from their source of livelihood. In fact, many new studies are
-            still being done to acknowledge the quantum of damage done to Bharat
-            by medieval & modern colonialists.
+            forced to shut, and our people were stripped of their possessions and
+            livelihood. Many new studies still acknowledge the quantum of damage
+            done to Bharat by colonialists.
           </p>
-          <p>
-            An inherent brilliance of its people & the blessings from the gods
-            has made Bharat a competent player on the global stage in recent
-            years. Our samskaras, aspirations, and consistent focus on education
-            has helped Bharat achieve new milestones in fields like SpaceTech,
-            IT, services, trade, sports, innovation, and many others.
+          <p className="leading-relaxed">
+            Despite this, Bharat's inherent brilliance and blessings have made
+            it a global player. Our focus on education has driven achievements
+            in SpaceTech, IT, trade, sports, and more.
           </p>
-          <p>
-            Bharat is brimming with its aspiring youth, and this opportunity can
-            only be optimally utilised if this vibrant energy is tuned well &
-            given precise direction. Our civilisation stands at a very important
-            crossroad of its journey, and we believe that effective decisions
-            cannot be taken by physically, mentally & spiritually weak people.
-            Strength translates to Confidence; Knowledge to Empowerment.
+          <p className="leading-relaxed">
+            Bharat's youth holds immense potential, which can only be harnessed
+            through direction and strength. We believe effective decisions are
+            made by individuals strong in body, mind, and spirit.
           </p>
-          <p>
+          <p className="leading-relaxed">
             In 2024, Srikula Foundation is building platforms such as Kashmir
-            LitFest where we allow inter-mixing of ideas, culture, language &
-            knowledge systems. A platform which benefits from our diverse
-            philosophies & celebrates our common inheritance. Kashmir LitFest is
-            an initiative to create a brand which takes Kashmir to the world &
-            enlightens it with the wealth of inter-disciplinary knowledge
-            systems we prepare to churn. We aim to facilitate our youth an
-            atmosphere which allows comprehensive education & true empowerment.
+            LitFest to mix ideas, cultures, and knowledge systems. This initiative
+            aims to take Kashmir to the world and empower youth through
+            comprehensive education.
           </p>
-          <p>
-            Srikula Foundation is also working on creating modern classrooms for
-            children, skill-developing schools for youth & scholarships for the
-            deserving. In our humble attempts, we’ve received unprecedented
-            support and assistance from many individuals as well as
-            organisations. We stand humbled for all help received, committed to
-            our efforts, and in gratitude to the Mother Divine for everything.
+          <p className="leading-relaxed">
+            Srikula Foundation is also creating modern classrooms, skill-developing
+            schools, and scholarships. We are grateful for the support received
+            and committed to our mission.
           </p>
         </div>
 
         {/* Image Section */}
-        <div className="lg:w-1/3">
+        <div className="lg:w-[25vw]">
           <img
             src={visionImage}
             alt="Our Vision"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-md object-cover  sm:h-[38vw]"
           />
         </div>
       </div>
+    </div>
     </div>
   );
 }

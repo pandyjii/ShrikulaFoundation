@@ -31,7 +31,7 @@ export const CountDownTimer = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-56 sm:h-80 bg-white py-8 px-1 md:flex-row md:space-y-0 md:space-x-8">
+    <div className="flex justify-center items-center h-44 bg-white py-8 px-1 md:flex-row md:space-y-0 md:space-x-8">
       {/* Left Leaf */}
       <img
         src={leftLeave}

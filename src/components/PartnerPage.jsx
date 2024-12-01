@@ -23,7 +23,7 @@ const festivalPartners = [
   {
     name: "Smart4Bharat",
     logo: smart,
-    link: "", 
+    link: "https://smart4bharat.com", 
   },
   {
     name: "Rising Kashmir",
@@ -33,7 +33,7 @@ const festivalPartners = [
   {
     name: "Rishi Hood University",
     logo: rishi, 
-    link: "hhttps://rishihood.edu.in/",
+    link: "https://rishihood.edu.in/",
   },
   {
     name: "Prachyam TV",
