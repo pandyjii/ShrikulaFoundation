@@ -36,7 +36,7 @@ export const NewsMedia = () => {
       image: news1,
     },
     {
-      title: "Stories in the Snow: Kashmir Literary Festival Showcases Regional and Global Talent",
+      title: "Stories in the Snow: Kashmir Literature Festival Showcases Regional and Global Talent",
       image: news2,
     },
     {
@@ -44,7 +44,7 @@ export const NewsMedia = () => {
       image: news3,
     },
     {
-      title: "From Poets to Performers: Kashmir Literary Festival Revives the Spirit of the Valley",
+      title: "From Authors to Performers: Kashmir Literature Festival Revives the Spirit of the Valley",
       image: news4,
     },
   ];
