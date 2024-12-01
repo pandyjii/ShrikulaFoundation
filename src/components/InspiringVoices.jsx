@@ -71,12 +71,12 @@ export const InspiringVoices = () => {
       topic: "Democracy and Electoral Reforms",
       image: quraisi,
     },
-    {
-      name: "Yana Mir",
-      role: "Kashmir's First Female Vlogger",
-      topic: "",
-      image: yana,
-    },
+    // {
+    //   name: "Yana Mir",
+    //   role: "Kashmir's First Female Vlogger",
+    //   topic: "",
+    //   image: yana,
+    // },
     {
       name: "Javed Beigh",
       role: "Social Activist, Representing J&K at UN",
