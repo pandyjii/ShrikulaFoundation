@@ -9,7 +9,6 @@ import chandra from "../../assets/inspiringVoiceImg/chandrachur.png";
 import ashok from "../../assets/inspiringVoiceImg/drAshok.png";
 import pandey from "../../assets/inspiringVoiceImg/dp pandey.png";
 import javed from "../../assets/inspiringVoiceImg/javedBeigh.png";
-// import kallol from "../assets/inspiringVoiceImg/kallol.png";
 import kanwal from "../../assets/newsMedia/kanwal.png";
 import namrata from "../../assets/inspiringVoiceImg/namrata.png";
 import raja from "../../assets/inspiringVoiceImg/rajaMuneeb.png";
@@ -19,8 +18,11 @@ import nilofer from "../../assets/inspiringVoiceImg/nilofer khan.png";
 import shela from "../../assets/inspiringVoiceImg/shehla rashid.png";
 import shiv from "../../assets/inspiringVoiceImg/shiv-kunal-verma.jpg";
 import quraisi from "../../assets/inspiringVoiceImg/syQuraishi.png";
-import yana from "../../assets/inspiringVoiceImg/yanaMir.png";
-import Kallol from "../../assets/Kallol.png"
+import Kallol from "../../assets/inspiringVoiceImg/Kallol.png";
+import arun from "../../assets/inspiringVoiceImg/arun.png";
+import azra from "../../assets/inspiringVoiceImg/azra.jpeg";
+import emaad from "../../assets/inspiringVoiceImg/emaad.jpeg";
+import jehanzeb from "../../assets/inspiringVoiceImg/jehanzeb.jpeg";
 export const InspiringVoices = () => {
   const speakers = [
     {
@@ -36,6 +38,24 @@ export const InspiringVoices = () => {
       image: raja,
     },
     {
+      name: "Emaad Makhdoomi",
+      role: "Principal Correspondent (The New Indian) for J & K / Ladakh",
+      topic: "",
+      image: emaad,
+    },
+    {
+      name: "Azra Mufti",
+      role: "Author & Social Worker",
+      topic: "",
+      image: azra,
+    },
+    {
+      name: "Jehanzeb Allaqaband",
+      role: "Lawyer, Public Speaker & Social Activist",
+      topic: "",
+      image: jehanzeb,
+    },
+    {
       name: "Amb. Kanwal Sibal",
       role: "Former Foreign Secretary of India & Chancellor, JNU",
       topic: "Indian Diplomacy in Changing Times",
@@ -48,16 +68,34 @@ export const InspiringVoices = () => {
       image: namrata,
     },
     {
+      name: "Adv. Arun Prabhat",
+      role: "Speaker, Activist & Youth Leader",
+      topic: "Columnist & Geo-political observer",
+      image: arun,
+    },
+    {
       name: "Dr. Ashok Lahiri",
       role: "Former Chief Economic Advisor, Government of India",
       topic: "Economic Growth and Challenges in India",
       image: ashok,
     },
     {
+      name: "Aadi Achint",
+      role: "Founder, DEF talks & Geopolitical Observer",
+      topic: "",
+      image: aadi,
+    },
+    {
       name: "Dr. S.K. Manjul",
       role: "Add'l DG, Archaeological Survey of India ",
       topic: "Archaeological Survey of India",
       image: manjul,
+    },
+    {
+      name: "Dr. Henana Berges",
+      role: "Poet, Stroryteller & Author",
+      topic: "",
+      image: henna,
     },
     {
       name: "Kallol Bhattarcherjee",
@@ -70,12 +108,6 @@ export const InspiringVoices = () => {
       role: "Former Chief Election Commissioner of India",
       topic: "Democracy and Electoral Reforms",
       image: quraisi,
-    },
-    {
-      name: "Yana Mir",
-      role: "Kashmir's First Female Vlogger",
-      topic: "",
-      image: yana,
     },
     {
       name: "Javed Beigh",
@@ -96,12 +128,6 @@ export const InspiringVoices = () => {
       image: shiv,
     },
     {
-      name: "Dr. Henana Berges",
-      role: "Poet, Stroryteller & Author",
-      topic: "",
-      image: henna,
-    },
-    {
       name: "Ramnik Singh Maan",
       role: "Observer & Speaker",
       topic: "The Role of Sikh History in Modern India",
@@ -120,28 +146,22 @@ export const InspiringVoices = () => {
       image: shela,
     },
     {
-      name: "Aadi Achint",
-      role: "Founder, DEF talks & Geopolitical Observer",
-      topic: "",
-      image: aadi,
-    },
-    {
       name: "Chandrachur Ghose",
       role: "Author & Researcher",
       topic: "Unsung Heroes of Indian Freedom Struggle",
       image: chandra,
     },
     {
-      name: "Prof. Nilofer Khan",
-      role: "Vice-Chancellor, Kashmir University",
-      topic: "",
-      image: nilofer,
-    },
-    {
       name: "Anuj Dhar",
       role: "Author & Researcher",
       topic: "Netaji and the Mystery of INA",
       image: anuj,
+    },
+    {
+      name: "Prof. Nilofer Khan",
+      role: "Vice-Chancellor, Kashmir University",
+      topic: "",
+      image: nilofer,
     },
   ];
   const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
@@ -176,7 +196,7 @@ export const InspiringVoices = () => {
     >
       {/* Heading Section */}
       <div className="w-full flex flex-col justify-center items-center mb-10">
-        <div className="bg-[#FBB59C] w-fit px-4 py-3 text-center">
+        <div className="bg-[#FF9F69] w-fit px-4 py-3 text-center">
           <h2 className="text-2xl lg:text-4xl font-bold text-black">
             Meet Our Speakers
           </h2>
@@ -204,7 +224,7 @@ export const InspiringVoices = () => {
               <img
                 src={speaker.image}
                 alt={speaker.name}
-                className="w-full h-[310px] object-cover rounded-lg"
+                className="w-full h-[310px] object-cover rounded-lg bg-black"
               />
               <div className="p-4 text-center">
                 <h4 className="text-base font-bold text-black">
@@ -217,8 +237,8 @@ export const InspiringVoices = () => {
               </div>
               {/* Popup for Speaker Details */}
               {hoveredSpeaker === index && (
-                <div className="absolute top-0 left-0 bg-[#FBB59C] p-6 w-full h-full flex flex-col justify-center items-center rounded-lg shadow-lg z-10 border- border-blue-200">
-                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
+                <div className="absolute top-0 left-0 bg-[#FF9F69] px-6 w-full h-full flex flex-col items-center pt-10 rounded-lg shadow-lg z-10 border- border-blue-200">
+                  <div className="w-24 h-24 rounded-full overflow-hidden mb-4 bg-black border-2 border-white">
                     <img
                       src={speaker.image}
                       alt={speaker.name}

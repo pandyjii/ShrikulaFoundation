@@ -30,7 +30,7 @@ export const AboutKLF = () => {
             and carve Kashmir's way on the world stage as the 'Powerhouse of
             Wisdom.'
           </p>
-          <button className="mt-6 px-8 py-2 bg-[#BA451C] text-white rounded-full shadow-lg hover:bg-white hover:text-black transition" onClick={handleClick}>
+          <button className="mt-6 px-8 py-2 bg-[#FF9F69] hover:bg-[#BA451C] rounded-full shadow-lg hover:text-black transition" onClick={handleClick}>
               Learn More
           </button>
           </div>

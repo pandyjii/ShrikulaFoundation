@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <NavLink
             to="/register"
-            className="border border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition"
+            className="border border-white text-white px-4 py-2 rounded-full hover:bg-[#BA451C] hover:text-black transition"
           >
             Donate Now
           </NavLink>
@@ -157,7 +157,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/register"
-            className="border border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition text-center"
+            className="border border-white text-white px-4 py-2 rounded-full hover:bg-[#BA451C] hover:text-black transition text-center"
             onClick={() => setIsMenuOpen(false)}
           >
             Donate Now

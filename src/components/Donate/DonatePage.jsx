@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import bgImage from '../../assets/gallery/galleryBg.png'
-import logo from '../../assets/srikulalogo.png'
-import paymentBg from '../../assets/paymetBg.png'
+import bgImage from "../../assets/gallery/galleryBg.png";
+import logo from "../../assets/srikulalogo.png";
+import paymentBg from "../../assets/paymetBg.png";
 export function ShrikulaDonation() {
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState(""); // State for the note input
@@ -32,23 +32,30 @@ export function ShrikulaDonation() {
 
     const isScriptLoaded = await loadRazorpayScript();
     if (!isScriptLoaded) {
-      alert("Failed to load Razorpay SDK. Please refresh the page and try again.");
+      alert(
+        "Failed to load Razorpay SDK. Please refresh the page and try again."
+      );
       return;
     }
 
     if (!window.Razorpay) {
-      alert("Razorpay is not available. Please refresh the page and try again.");
+      alert(
+        "Razorpay is not available. Please refresh the page and try again."
+      );
       return;
     }
 
     try {
-      const response = await fetch("https://api-dbaxa3zxka-uc.a.run.app/srikula/createpayment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ amount: Number(amount), note }),
-      });
+      const response = await fetch(
+        "https://api-dbaxa3zxka-uc.a.run.app/srikula/createpayment",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ amount: Number(amount), note }),
+        }
+      );
 
       const order = await response.json();
 
@@ -88,7 +95,6 @@ export function ShrikulaDonation() {
       className="flex justify-center items-center min-h-screen bg-cover bg-center font-inter"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-
       <div className="flex flex-col items-center text-center mt-10 sm:w-[40vw]">
         {/* Header */}
         <h2 className="text-3xl font-bold text-black font-comic">
@@ -100,57 +106,60 @@ export function ShrikulaDonation() {
         {/* Donation Card */}
         <div className=" p-6 text-center mt-8 relative">
           <div>
-            <img src={paymentBg} className="w-[90vw] h-[70vh] sm:h-[40vh] lg:w-[25vw] lg:h-[80vh]"/>
+            <img
+              src={paymentBg}
+              className="w-[90vw] h-[70vh] sm:h-[40vh] lg:w-[25vw] lg:h-[80vh]"
+            />
           </div>
           <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
-          {/* Logo */}
-          <div className="w-12 h-12 mx-auto mb-4 bg-white shadow-md">
-            <img src={logo} alt="logo" className="w-full h-full" />
-          </div>
+            {/* Logo */}
+            <div className="w-12 h-12 mx-auto mb-4 bg-white shadow-md">
+              <img src={logo} alt="logo" className="w-full h-full" />
+            </div>
 
-          {/* Title Section */}
-          <h3 className="text-lg font-medium text-gray-700">Paying</h3>
-          <h2 className="text-xl font-bold text-gray-800 mt-1 sm:w-[300px]">
-            SRIKULA FOUNDATION
-          </h2>
-          <p className="text-sm text-blue-500 mt-2">
-            razorpay.me/@srikulafoundation
-          </p>
-          
-          {/* Donation Amount Input */}
-          <div className=" flex flex-col gap-9 items-center ">
-          <div className="flex items-center justify-center mt-6">
-  <div className="flex items-center gap-2">
-    <p className="text-3xl text-gray-800 relative  left-5">₹</p>
-    <input
-      type="text"
-      value={amount}
-      onChange={(e) =>
-        setAmount(e.target.value.replace(/[^0-9]/g, ""))
-      }
-      className="text-3xl text-center outline-none w-24"
-      placeholder="0"
-    />
-  </div>
-</div>
+            {/* Title Section */}
+            <h3 className="text-lg font-medium text-gray-700">Paying</h3>
+            <h2 className="text-xl font-bold text-gray-800 mt-1 sm:w-[300px]">
+              SRIKULA FOUNDATION
+            </h2>
+            <p className="text-sm text-blue-500 mt-2">
+              razorpay.me/@srikulafoundation
+            </p>
 
-          {/* Note Input */}
-          <input
-            type="text"
-            placeholder="Add a note"
-            value={note}
-            onChange={(e) => setNote(e.target.value)}
-            className="w-[80%] bg-gray-100 text-black text-center mt-4 mb-4 py-1 rounded focus:outline-none "
-          />
+            {/* Donation Amount Input */}
+            <div className=" flex flex-col gap-9 items-center ">
+              <div className="flex items-center justify-center mt-6">
+                <div className="flex items-center gap-2">
+                  <p className="text-3xl text-gray-800 relative  left-5">₹</p>
+                  <input
+                    type="text"
+                    value={amount}
+                    onChange={(e) =>
+                      setAmount(e.target.value.replace(/[^0-9]/g, ""))
+                    }
+                    className="text-3xl text-center outline-none w-24"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
 
-          {/* Submit Button */}
-          <button
-            onClick={handleDonation}
-            className="w-full bg-[#BA451C] text-white font-medium rounded-md py-2 mt-3 hover:bg-[#9a3715] transition-all"
-          >
-            Pay ₹{amount || 0}
-          </button>
-          </div>
+              {/* Note Input */}
+              <input
+                type="text"
+                placeholder="Add a note"
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                className="w-[80%] bg-gray-100 text-black text-center mt-4 mb-4 py-1 rounded focus:outline-none "
+              />
+
+              {/* Submit Button */}
+              <button
+                onClick={handleDonation}
+                className="w-full  text-white font-medium rounded-md py-2 mt-3 bg-[#FF9F69] hover:bg-[#BA451C] transition-all"
+              >
+                Pay ₹{amount || 0}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -164,8 +173,8 @@ export function ShrikulaDonation() {
               Your Contribution Matters 🎉
             </h2>
             <p className="text-sm text-gray-600 mt-4">
-              We are deeply grateful for your support towards Srikula Foundation.
-              Your help empowers lives!
+              We are deeply grateful for your support towards Srikula
+              Foundation. Your help empowers lives!
             </p>
             <button
               onClick={() => setShowPopup(false)}
