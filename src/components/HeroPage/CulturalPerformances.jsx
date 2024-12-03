@@ -33,7 +33,7 @@ const CulturalPerformances = () => {
         {/* Heading */}
         <div className="text-center mb-5 mt-2">
           <div className="w-full flex justify-center text-center">
-            <h2 className="bg-[#FBB59C] w-fit text-2xl lg:text-3xl px-4 py-3 font-bold text-black text-center">
+            <h2 className="bg-[#FF9F69] w-fit text-2xl lg:text-3xl px-4 py-3 font-bold text-black text-center">
               Cultural Performances & Exhibitions
             </h2>
           </div>

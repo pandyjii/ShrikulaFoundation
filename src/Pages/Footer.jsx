@@ -98,7 +98,7 @@ export function Footer() {
         <div className="flex items-start gap-3">
           <FaMapMarkerAlt className="text-xl " />
           <p className="text-sm md:text-base">
-            At Dal Lakefront, SKICC, Srinagar, Bharat, 24800
+            2nd floor, Opposite Townhall. Budgam - 191111. Bharat
           </p>
         </div>
         <div className="flex items-start gap-3">
@@ -106,14 +106,14 @@ export function Footer() {
           <div className="text-sm md:text-base">
             <a
               href="tel:+916200035190"
-              className="hover:text-gray-800 transition"
+              className="hover:text-gray-800 transition mr-1"
             >
               +91 6200035190
             </a>
             /
             <a
               href="tel:+919682330263"
-              className="hover:text-gray-800 transition"
+              className="hover:text-gray-800 transition ml-1"
             >
               +91 9682330263
             </a>
@@ -122,7 +122,14 @@ export function Footer() {
 
         <div className="flex items-start gap-3">
           <FaEnvelope className="text-xl " />
-          <p className="text-sm md:text-base">contact@srikula.org</p>
+          <p className="text-sm md:text-base">
+            <a
+              href="mailto:contact@srikula.org"
+              className=" hover:underline"
+            >
+              contact@srikula.org
+            </a>
+          </p>
         </div>
         {/* Subscription Form */}
         <div className="flex flex-col gap-4 text-black font-inter">
@@ -133,7 +140,7 @@ export function Footer() {
               placeholder="Email Address"
               className="md:w-10 lg:w-full flex-1 px-3 py-2 text-black text-sm md:text-base focus:outline-none"
             />
-            <button className="bg-[#F69675] px-4 py-2 rounded-lg text-sm md:text-base text-white">
+            <button className=" bg-[#FBB59C] hover:bg-[#BA451C] px-4 py-2 rounded-lg text-sm md:text-base text-white">
               Subscribe
             </button>
           </div>

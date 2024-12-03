@@ -58,7 +58,7 @@ export function ContactUs() {
       style={{ backgroundImage: `url(${inspireBg})` }}
     >
       <div className="bg-white p-6 sm:p-8 shadow-lg w-full max-w-lg rounded-lg mx-4 h-full">
-        <h2 className="text-2xl font-bold text-center text-[#BA451C] mb-6">
+        <h2 className="text-2xl font-bold text-center text-[#FF9F69] mb-6">
           Contact Us
         </h2>
 
@@ -136,7 +136,7 @@ export function ContactUs() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-[#BA451C] text-white font-medium py-2 rounded-md hover:bg-[#9a3715] transition-all text-sm sm:text-base"
+            className="w-full bg-[#FF9F69] hover:bg-[#BA451C] text-white font-medium py-2 rounded-md transition-all text-sm sm:text-base"
           >
             Send Message
           </button>
