@@ -2,7 +2,7 @@ import instagram from "../assets/footer/Instagram.png";
 import facebook from "../assets/footer/Facebook.png";
 import twitter from "../assets/footer/twitter.png";
 import footerBg from "../assets/footer/footerBg.png";
-import { Link,NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -13,7 +13,7 @@ import {
 export function Footer() {
   return (
     <div
-      className=" flex flex-col md:flex-row justify-center py-14 sm:py-10 gap-10 sm:px-18 md:pl-10 relative"
+      className=" flex flex-col md:flex-row justify-center py-14 sm:py-10 gap-10 sm:px-18 relative"
       style={{
         backgroundImage: `url(${footerBg})`,
         backgroundSize: "cover",
@@ -42,7 +42,7 @@ export function Footer() {
 
       {/* Company and Resources Section */}
       <div className="flex flex-col items-start gap-6 md:w-[50vw] px-4 text-black font-inter">
-        <div className="flex flex-wrap justify-center  items-center w-full gap-36">
+        <div className="flex lg:flex-wrap justify-center  items-center w-full gap-36">
           {/* Company Links */}
           <div className="flex flex-col gap-6">
             <Link to={"/"} className="text-sm md:text-base">
@@ -71,8 +71,6 @@ export function Footer() {
                 <img src={twitter} alt="Instagram Icon" className="h-8 w-8" />
               </a>
             </div>
-
-           
           </div>
 
           {/* Resources Links */}
@@ -83,12 +81,25 @@ export function Footer() {
             <p className="text-sm md:text-base">Books</p>
           </div>
         </div>
-
-        {/* Social Media Icons */}
+      </div>
+      <div className="flex justify-center w-full sm:hidden">
+        <div className="sm:flex-col justify-center items-center font-inter gap-1 w-[80%] sm:w-full">
+          <p className=" text-lg text-center">
+            Join Us in Making a Difference- Kindly Donate Today{" "}
+          </p>
+          <div className="flex justify-center items-center sm:mt-3">
+            <NavLink
+              to="/register"
+              className="border border-white bg-[#BA451C] text-white px-4 py-2 rounded-full   hover:text-black transition"
+            >
+              Donate Now
+            </NavLink>
+          </div>
+        </div>
       </div>
 
       {/* Contact and Subscription Section */}
-      <div className="flex flex-col items-start mt-20 sm:mt-0 gap-4 md:w-1/3 px-4 text-black font-inter">
+      <div className="flex flex-col items-start gap-4 md:w-1/3 px-4 text-black font-inter">
         <p className="text-xl font-semibold">Parent</p>
         <div className="flex items-start gap-3">
           <FaGlobe className="text-xl " />
@@ -124,10 +135,7 @@ export function Footer() {
         <div className="flex items-start gap-3">
           <FaEnvelope className="text-xl " />
           <p className="text-sm md:text-base">
-            <a
-              href="mailto:contact@srikula.org"
-              className=" hover:underline"
-            >
+            <a href="mailto:contact@srikula.org" className=" hover:underline">
               contact@srikula.org
             </a>
           </p>
@@ -141,26 +149,27 @@ export function Footer() {
               placeholder="Email Address"
               className="md:w-10 lg:w-full flex-1 px-3 py-2 text-black text-sm md:text-base focus:outline-none"
             />
-            <button className=" bg-[#BA451C] hover:bg-[#fff] px-4 py-2 rounded-lg text-sm md:text-base text-white">
+            <button className=" bg-[#BA451C] hover:text-black px-4 py-2 rounded-lg text-sm md:text-base text-white">
               Subscribe
             </button>
           </div>
         </div>
       </div>
-
-      <div className=" hidden sm:block flex-col justify-center absolute bottom-80 sm:bottom-32 left-12  sm:left-[37vw]  items-center font-inter gap-1">
-            <p className=" text-lg">Join Us in Making a Difference- Kindly Donate Today </p>
-            <div className=" flex justify-center items-center mt-3">
-            <NavLink
+      <div className=" hidden sm:block flex-col justify-center absolute bottom-44 lg:bottom-32  left-[30vw] w-[40vw] lg:left-[30vw]  items-center font-inter gap-1">
+        <p className=" text-lg text-center">
+          Join Us in Making a Difference- Kindly Donate Today{" "}
+        </p>
+        <div className=" flex justify-center items-center mt-3">
+          <NavLink
             to="/register"
             className="border border-white bg-[#BA451C] text-white px-4 py-2 rounded-full   hover:text-black transition"
           >
             Donate Now
           </NavLink>
-          </div>
-          </div>
+        </div>
+      </div>
       {/* Copyright Section */}
-      <div className="flex absolute bottom-2 left-12 sm:left-[45vw] sm:bottom-4 items-center font-inter gap-1">
+      <div className="flex absolute bottom-2 left-[14vw] md:left-[35vw] lg:left-[45vw] sm:bottom-4 items-center font-inter gap-1">
         <p>
           © 2024 KLF | Powered by{" "}
           <span className="bg-black py-2 px-3 ml-1 text-sm font-bold text-white">
