@@ -196,8 +196,8 @@ export const InspiringVoices = () => {
     >
       {/* Heading Section */}
       <div className="w-full flex flex-col justify-center items-center mb-10">
-        <div className="bg-[#FF9F69] w-fit px-4 py-3 text-center">
-          <h2 className="text-2xl lg:text-4xl font-bold text-black">
+        <div className="bg-[#BA451C] w-fit px-4 py-3 text-center">
+          <h2 className="text-2xl lg:text-4xl font-bold text-white">
             Meet Our Speakers
           </h2>
         </div>

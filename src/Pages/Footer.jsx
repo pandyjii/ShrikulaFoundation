@@ -2,7 +2,7 @@ import instagram from "../assets/footer/Instagram.png";
 import facebook from "../assets/footer/Facebook.png";
 import twitter from "../assets/footer/twitter.png";
 import footerBg from "../assets/footer/footerBg.png";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -45,7 +45,6 @@ export function Footer() {
         <div className="flex flex-wrap justify-center  items-center w-full gap-36">
           {/* Company Links */}
           <div className="flex flex-col gap-6">
-            <p className="text-xl font-semibold"></p>
             <Link to={"/"} className="text-sm md:text-base">
               Home
             </Link>
@@ -72,6 +71,8 @@ export function Footer() {
                 <img src={twitter} alt="Instagram Icon" className="h-8 w-8" />
               </a>
             </div>
+
+           
           </div>
 
           {/* Resources Links */}
@@ -87,7 +88,7 @@ export function Footer() {
       </div>
 
       {/* Contact and Subscription Section */}
-      <div className="flex flex-col items-start gap-4 md:w-1/3 px-4 text-black font-inter">
+      <div className="flex flex-col items-start mt-20 sm:mt-0 gap-4 md:w-1/3 px-4 text-black font-inter">
         <p className="text-xl font-semibold">Parent</p>
         <div className="flex items-start gap-3">
           <FaGlobe className="text-xl " />
@@ -140,12 +141,24 @@ export function Footer() {
               placeholder="Email Address"
               className="md:w-10 lg:w-full flex-1 px-3 py-2 text-black text-sm md:text-base focus:outline-none"
             />
-            <button className=" bg-[#FBB59C] hover:bg-[#BA451C] px-4 py-2 rounded-lg text-sm md:text-base text-white">
+            <button className=" bg-[#BA451C] hover:bg-[#fff] px-4 py-2 rounded-lg text-sm md:text-base text-white">
               Subscribe
             </button>
           </div>
         </div>
       </div>
+
+      <div className=" hidden sm:block flex-col justify-center absolute bottom-80 sm:bottom-32 left-12  sm:left-[37vw]  items-center font-inter gap-1">
+            <p className=" text-lg">Join Us in Making a Difference- Kindly Donate Today </p>
+            <div className=" flex justify-center items-center mt-3">
+            <NavLink
+            to="/register"
+            className="border border-white bg-[#BA451C] text-white px-4 py-2 rounded-full   hover:text-black transition"
+          >
+            Donate Now
+          </NavLink>
+          </div>
+          </div>
       {/* Copyright Section */}
       <div className="flex absolute bottom-2 left-12 sm:left-[45vw] sm:bottom-4 items-center font-inter gap-1">
         <p>
