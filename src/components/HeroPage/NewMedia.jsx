@@ -3,7 +3,7 @@ import newsBg from "../../assets/newsMedia/mediaBg.png";
 import news1 from "../../assets/newsMedia/image.png";
 import news2 from "../../assets/newsMedia/image 104.png";
 import news3 from "../../assets/newsMedia/Group 44496.png";
-import news4 from "../../assets/newsMedia/image 103 (1).png";
+import news4 from "../../assets/newsMedia/image 103.png";
 
 export const NewsMedia = () => {
   const [isVisible, setIsVisible] = useState(false);
