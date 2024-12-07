@@ -11,6 +11,7 @@ import sabere from "../../assets/partner/SabreandQuill.png";
 import weddingUniversity from "../../assets/partner/weddingUniversity.png";
 import dps from "../../assets/partner/Dps_srinagar.png";
 
+
 const festivalPartners = [
   {
     name: "J&K Academy of Art, Culture & language",
@@ -68,7 +69,11 @@ const festivalPartners = [
     link: "https://dpssrinagar.com/", 
   },
 
-
+{
+    name: "The Wedding University Events",
+    logo: weddingUniversity,
+    link: "https://www.instagram.com/the_wedding_university_events?igsh=cDdvbTFjbWF0NzN0", 
+  },
 ];
 
 export const FestivalPartners = () => {
