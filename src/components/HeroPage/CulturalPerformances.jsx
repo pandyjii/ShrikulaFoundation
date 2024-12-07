@@ -1,6 +1,6 @@
 import performanceBg from "../../assets/performanceImg/performanceBg.png";
 import image1 from "../../assets/performanceImg/Aiswarya.png";
-import image2 from "../../assets/performanceImg/Aaha.png";
+import image2 from "../../assets/performanceImg/shashrang.jpeg";
 import image3 from "../../assets/WhatsApp Image 2024-11-27 at 13.22.51_e355e106.png";
 
 const CulturalPerformances = () => {
@@ -13,8 +13,8 @@ const CulturalPerformances = () => {
     },
     {
       imageSrc: image2,
-      title: "Abha Hanjura",
-      description: "Famous Kashmiri Singer",
+      title: "The Shashrang Band",
+      description: "Kashmir",
     },
     {
       imageSrc: image3,

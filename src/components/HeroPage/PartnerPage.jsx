@@ -8,6 +8,8 @@ import delhiUniversity from "../../assets/partner/DULitFest.png";
 import urbanPandit from "../../assets/partner/UrbanPandit.png";
 import gulshanBook from "../../assets/partner/gulshanBook.png";
 import sabere from "../../assets/partner/SabreandQuill.png";
+import weddingUniversity from "../../assets/partner/weddingUniversity.png";
+import dps from "../../assets/partner/Dps_srinagar.png";
 
 const festivalPartners = [
   {
@@ -60,6 +62,12 @@ const festivalPartners = [
     logo: sabere,
     link: "https://www.sabreandquill.com/", 
   },
+  {
+    name: "Delhi Public School Srinagar",
+    logo: dps,
+    link: "https://dpssrinagar.com/", 
+  },
+
 
 ];
 
