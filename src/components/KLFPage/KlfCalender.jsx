@@ -102,7 +102,7 @@ export const KlfCalender = () => {
         <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50">
           <div
             ref={popupRef} // Attach the ref to the pop-up container
-            className="bg-white rounded-3xl p-6 max-w-4xl w-full flex flex-col items-center h-[98vh] overflow-y-auto relative"
+            className="bg-white rounded-3xl p-6 max-w-4xl w-full flex flex-col items-center md:h-[98vh] overflow-y-auto relative"
             style={{
               WebkitOverflowScrolling: "touch",
               scrollbarWidth: "none",
@@ -110,7 +110,7 @@ export const KlfCalender = () => {
             }}
           >
             <button
-              className="absolute right-6 top-2 font-bold text-white px-2 rounded-md bg-slate-400 "
+              className="absolute right-2 lg:right-6 top-6 lg:top-2 font-bold text-white px-2 rounded-md bg-slate-400 "
               onClick={() => setShowPopup(false)}
             >
               X
@@ -120,7 +120,7 @@ export const KlfCalender = () => {
               Books Featuring at KLF
             </h2>
             <div className="flex justify-center items-center">
-              <img src={allBook} alt="Books" className="w-[50vw] h-auto" />
+              <img src={allBook} alt="Books" className="w-[70vw] lg:w-[50vw] h-auto" />
             </div>
           </div>
         </div>
