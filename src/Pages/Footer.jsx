@@ -110,7 +110,7 @@ export function Footer() {
         <div className="flex items-start gap-3">
           <FaMapMarkerAlt className="text-xl " />
           <p className="text-sm md:text-base">
-            2nd floor, Opposite Townhall. Budgam - 191111. Bharat
+            2nd floor, Opposite Townhall, Budgam - 191111, Bharat
           </p>
         </div>
         <div className="flex items-start gap-3">
@@ -118,14 +118,14 @@ export function Footer() {
           <div className="text-sm md:text-base">
             <a
               href="tel:+916200035190"
-              className="hover:text-gray-800 transition mr-1"
+              className="hover:text-gray-800 transition mr-2 hover:underline"
             >
               +91 6200035190
             </a>
             /
             <a
               href="tel:+919682330263"
-              className="hover:text-gray-800 transition ml-1"
+              className="hover:text-gray-800 transition ml-2 hover:underline"
             >
               +91 9682330263
             </a>

@@ -10,14 +10,14 @@ const Navbar = () => {
 
   
   return (
-    <nav className="bg-black font-inter text-white px-8">
+    <nav className="bg-black font-inter text-white px-8 py-2">
       {/* Navbar Container */}
       <div  className=" flex-col pb-3">
-      <div className="w-[90vw] sm:w-[80vw] overflow-hidden">
+      {/* <div className="w-[90vw] sm:w-[80vw] overflow-hidden">
           <div className="animate-marquee whitespace-nowrap text-sm text-[#BA451C] md:text-base text-center px-4  font-inter font-semibold" style={{ animationDuration: '20s' }}>
           This Site is  Undermaintenance
           </div>
-        </div>
+        </div> */}
       <div className="flex items-center justify-between  sm:justify-around ">
         {/* Logo Section */}
         <Link to ={'/'} className="flex items-center">
