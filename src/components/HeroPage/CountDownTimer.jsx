@@ -4,25 +4,25 @@ import rightLeave from '../../assets/rightLeaves.png';
 
 export const CountDownTimer = () => {
   const calculateTimeLeft = () => {
-    const eventDate = new Date("2024-12-07T10:00:00"); // Target date
+    const eventDate = new Date("2025-10-11T09:00:00"); // Target date
     const currentTime = new Date();
     const difference = eventDate - currentTime;
 
     let timeLeft = {};
-    // if (difference > 0) {
-    //   timeLeft = {
-    //     days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-    //     hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-    //     minutes: Math.floor((difference / 1000 / 60) % 60),
-    //     seconds: Math.floor((difference / 1000) % 60),
-    //   };
-    // }
-    timeLeft = {
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    // timeLeft = {
+    //   days: 0,
+    //   hours: 0,
+    //   minutes: 0,
+    //   seconds: 0,
+    // };
     return timeLeft;
   };
 

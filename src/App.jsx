@@ -4,8 +4,9 @@ import { MainLayout } from "./mainLayout"
 import { Hero } from "./components/HeroPage/HeroSection"
 import { ContactUs } from "./components/ContactUs/ContactUs"
 import { KLF2024 } from "./components/KLFPage/KLF2024"
+import { KLF2025 } from "./components/KLFPage/KLF2025"
 import { ShrikulaDonation } from "./components/Donate/DonatePage"
-import { AboutUs } from "./components/AboutUs/AboutUs"
+import { Media } from "./components/Media/Media"
 import { AboutHeroSection } from "./components/AboutUs/AboutHeroSection"
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
      <Route index element={<Hero/>}/>
      <Route path="/contact" element={<ContactUs/>}/>
      <Route path="/klf2024" element={<KLF2024/>}/>
+     <Route path="/klf2025" element={<KLF2025/>}/>
+     <Route path="/media" element={<Media/>}/>
      <Route path="/register" element={<ShrikulaDonation/>}/>
      <Route path="/about" element={<AboutHeroSection/>}/>
 

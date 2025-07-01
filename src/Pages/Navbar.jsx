@@ -62,6 +62,26 @@ const Navbar = () => {
           >
             KLF 2024
           </NavLink>
+           <NavLink
+            to="/klf2025"
+            className={({ isActive }) =>
+              isActive
+                ? " border-b-2 border-white"
+                : " hover:scale-110"
+            }
+          >
+            KLF 2025
+          </NavLink>
+           <NavLink
+            to="/media"
+            className={({ isActive }) =>
+              isActive
+                ? " border-b-2 border-white"
+                : " hover:scale-110"
+            }
+          >
+            Media
+          </NavLink>
        
           <NavLink
             to=""
