@@ -22,13 +22,13 @@ export const DisplayPage = () => {
         <img
           src={displayText}
           alt="Display Text"
-          className="w-[90%] h-[30%] md:w-[50%] max-w-[500px]"
+          className="w-[90%] h-[80%] md:w-[80%] max-w-[600px]"
         />
 
         {/* Marquee Bottom Text */}
         <div className="absolute bottom-6 w-[100vw] sm:w-[50vw] overflow-hidden">
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base text-center px-4 text-black font-inter font-semibold">
-            7th & 8th of December 2024 at Dal Lakefront, SKICC, Srinagar, Bharat
+            11th & 12th of October 2025 at Dal Lakefront, SKICC, Srinagar, Bharat
           </div>
         </div>
       </div>
