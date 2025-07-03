@@ -43,12 +43,12 @@ export const InspiringVoices = () => {
       topic: "",
       image: emaad,
     },
-    {
-      name: "Azra Mufti",
-      role: "Author & Social Worker",
-      topic: "",
-      image: azra,
-    },
+    // {
+    //   name: "Azra Mufti",
+    //   role: "Author & Social Worker",
+    //   topic: "",
+    //   image: azra,
+    // },
     {
       name: "Jehanzeb Allaqaband",
       role: "Lawyer, Public Speaker & Social Activist",
@@ -109,12 +109,12 @@ export const InspiringVoices = () => {
       topic: "Democracy and Electoral Reforms",
       image: quraisi,
     },
-    {
-      name: "Javed Beigh",
-      role: "Social Activist, Representing J&K at UN",
-      topic: "Representing J&K at UN",
-      image: javed,
-    },
+    // {
+    //   name: "Javed Beigh",
+    //   role: "Social Activist, Representing J&K at UN",
+    //   topic: "Representing J&K at UN",
+    //   image: javed,
+    // },
     {
       name: "Ravinder Pandita",
       role: "President - Save Sharada Commitee & AIKS; Author",
@@ -157,12 +157,12 @@ export const InspiringVoices = () => {
       topic: "Netaji and the Mystery of INA",
       image: anuj,
     },
-    {
-      name: "Prof. Nilofer Khan",
-      role: "Vice-Chancellor, Kashmir University",
-      topic: "",
-      image: nilofer,
-    },
+    // {
+    //   name: "Prof. Nilofer Khan",
+    //   role: "Vice-Chancellor, Kashmir University",
+    //   topic: "",
+    //   image: nilofer,
+    // },
   ];
   const [hoveredSpeaker, setHoveredSpeaker] = useState(null);
   const scrollContainerRef = useRef(null);
@@ -198,7 +198,7 @@ export const InspiringVoices = () => {
       <div className="w-full flex flex-col justify-center items-center mb-10">
         <div className="bg-[#BA451C] w-fit px-4 py-3 text-center">
           <h2 className="text-2xl lg:text-4xl font-bold text-white">
-            Meet Our Speakers
+            KLF 2024 Speakers
           </h2>
         </div>
         <p className="mt-4 text-lg text-black text-center">

@@ -1,43 +1,25 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import gallerBg from "../../assets/gallery/galleryBg.png";
-import news1 from "../../assets/gallery/Galleryimage1.png";
-import news2 from "../../assets/gallery/gallertimage2.png";
-import news3 from "../../assets/gallery/galleryimage3.png";
-import news4 from "../../assets/gallery/galleryimage4.png";
+import img1 from "../../assets/gallery/img1.jpg";
+import img2 from "../../assets/gallery/img2.jpg";
+import img3 from "../../assets/gallery/img3.jpg";
+import img4 from "../../assets/gallery/img4.jpg";
+import img5 from "../../assets/gallery/img5.jpg";
+import img6 from "../../assets/gallery/img6.jpg";
+import img7 from "../../assets/gallery/img7.jpg";
+import img8 from "../../assets/gallery/img8.jpg";
+import img9 from "../../assets/gallery/img9.jpg";
+import img10 from "../../assets/gallery/img10.jpg";
+import img11 from "../../assets/gallery/img11.jpg";
+import img12 from "../../assets/gallery/img12.jpg";
+import img13 from "../../assets/gallery/img13.jpg";
+import img14 from "../../assets/gallery/img14.jpg";
+import img15 from "../../assets/gallery/img15.jpg";
 
 export const Gallery = () => {
-  const images = [news1, news2, news3, news4];
-  const [isPaused, setIsPaused] = useState(false); // Control animation
-  const [hoverIndex, setHoverIndex] = useState(null); // Track hovered image index
-  const scrollContainerRef = useRef(null); // Ref to scrolling container
-  const animationDuration = 15; // Total animation duration in seconds
-
-  useEffect(() => {
-    // Adjust container width dynamically, only for layout (not for animation)
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      const totalWidth = images.length * (scrollContainer.firstChild.offsetWidth + 16); // Image width + gap
-      scrollContainer.style.width = `${totalWidth}px`; // Total width for images
-    }
-  }, [images]);
-
-  const handleMouseEnter = (index) => {
-    setIsPaused(true);
-    setHoverIndex(index); // Set the hovered image index
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      scrollContainer.style.animationPlayState = "paused"; // Pause animation on hover
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsPaused(false);
-    setHoverIndex(null); // Reset hovered index
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      scrollContainer.style.animationPlayState = "running"; // Resume animation when mouse leaves
-    }
-  };
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const images = [img11, img15, img13, img2, img3, img4, img1, img5, img14, img12, img6, img7, img8, img9, img10];
 
   return (
     <div
@@ -54,27 +36,22 @@ export const Gallery = () => {
           <p className="text-lg">A Glimpse Into Our World</p>
         </div>
 
-        {/* Scrolling Gallery */}
-        <div className="overflow-hidden py-4">
+        {/* Scrolling Section */}
+        <div className="overflow-hidden relative py-4">
           <div
-            ref={scrollContainerRef}
-            className={`relative flex items-center gap-4 ${isPaused ? "" : "animate-scroll2"}`}
+            className={`flex gap-4 w-max animate-scrollGallery ${isPaused ? "paused" : ""}`}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
+            ref={scrollRef}
           >
-            {/* Render Images Twice for Seamless Loop */}
-            {images.concat(images).map((src, index) => (
+            {[...images, ...images].map((src, i) => (
               <div
-                key={index}
-                className={`flex-shrink-0 rounded-lg overflow-hidden transition duration-300 ${
-                  hoverIndex === index ? "grayscale-0" : "grayscale"
-                }`}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
+                key={i}
+                className="flex-shrink-0 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-300"
               >
                 <img
                   src={src}
-                  alt={`Gallery ${index + 1}`}
+                  alt={`Gallery ${i + 1}`}
                   className="w-full h-[200px] max-w-[400px] md:max-w-[300px] sm:max-w-[200px] object-contain"
                 />
               </div>

@@ -19,16 +19,16 @@ export const DisplayPage = () => {
       {/* Overlay Content */}
       <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex flex-col justify-center items-center text-black">
         {/* Centered Image */}
-        <img
+        {/* <img
           src={displayText}
           alt="Display Text"
           className="w-[90%] h-[80%] md:w-[80%] max-w-[600px]"
-        />
+        /> */}
 
         {/* Marquee Bottom Text */}
         <div className="absolute bottom-6 w-[100vw] sm:w-[50vw] overflow-hidden">
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base text-center px-4 text-black font-inter font-semibold">
-            11th & 12th of October 2025 at Dal Lakefront, SKICC, Srinagar, Bharat
+            Stay tuned for updates on KLF 25. Follow on our social handles @Kashmirlitfest For Brand partnerships & other inquiries - contact@srikula.org
           </div>
         </div>
       </div>

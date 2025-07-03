@@ -79,7 +79,7 @@ const festivalPartners = [
 export const FestivalPartners = () => {
   return (
     <div className="py-20 bg-white">
-      <h2 className="text-2xl font-bold text-center mb-8">Festival Partners</h2>
+      <h2 className="text-2xl font-bold text-center mb-8">KLF 2024 Festival Partners</h2>
       <div className="flex flex-wrap justify-center items-center gap-8">
         {festivalPartners.map((partner, index) => (
           <a

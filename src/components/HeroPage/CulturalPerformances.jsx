@@ -34,7 +34,7 @@ const CulturalPerformances = () => {
         <div className="text-center mb-5 mt-2">
           <div className="w-full flex justify-center text-center">
             <h2 className="bg-[#BA451C] w-fit text-2xl lg:text-3xl px-4 py-3 font-bold text-white text-center">
-              Cultural Performances & Exhibitions
+              KLF 2024 Cultural Performances & Events
             </h2>
           </div>
           <p className="mt-4 text-lg md:text-lg text-center font-semibold text-black">
@@ -55,9 +55,9 @@ const CulturalPerformances = () => {
                   src={card.imageSrc}
                   alt={card.title}
                 />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center w-[200px]">
-                  <h3 className="text-lg font-semibold">{card.title}</h3>
-                  <p className="text-sm">{card.description}</p>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-65 text-center w-[200px] rounded-t-md ">
+                  <h3 className="text-lg font-semibold text-[#fff]">{card.title}</h3>
+                  <p className="text-sm text-[#fff]">{card.description}</p>
                 </div>
               </div>
             </div>

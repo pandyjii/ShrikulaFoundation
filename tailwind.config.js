@@ -16,8 +16,9 @@ export default {
         scrollSm: "scroll 20s linear infinite",
         scrollSmInspire: "scroll 8s linear infinite",
         fadeIn: "fadeIn 3s ease-out",
-        marquee: 'marquee 10s linear infinite',
-        slideIn: 'slideIn 1s ease-out',
+        marquee: "marquee 12s linear infinite",
+        slideIn: "slideIn 1s ease-out",
+        scrollGallery: "scrollGallery 30s linear infinite",
       },
       keyframes: {
         scroll: {
@@ -26,7 +27,7 @@ export default {
         },
         scroll2: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" }, 
+          "100%": { transform: "translateX(-100%)" },
         },
         scrollSm: {
           "0%": { transform: "translateX(0%)" },
@@ -41,16 +42,20 @@ export default {
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
         marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         slideIn: {
-          '0%': { transform: 'translateY(-100%)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        scrollGallery: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
 
-     transform: {
+      transform: {
         "rotate-y-180": "rotateY(180deg)",
       },
       perspective: {
