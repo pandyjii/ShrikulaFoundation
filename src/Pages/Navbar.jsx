@@ -83,7 +83,7 @@ const Navbar = () => {
             Media
           </NavLink>
        
-          <NavLink
+          {/* <NavLink
             to=""
             className={({ isActive }) =>
               isActive
@@ -92,7 +92,7 @@ const Navbar = () => {
             }
           >
             Gallery
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact"
             className={({ isActive }) =>
